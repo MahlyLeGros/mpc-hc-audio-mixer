@@ -1,4 +1,4 @@
-﻿; SPDX-License-Identifier: GPL-3.0-or-later
+; SPDX-License-Identifier: GPL-3.0-or-later
 #ifndef PayloadDir
   #error Define PayloadDir to the verified portable package directory
 #endif
@@ -8,8 +8,8 @@
 [Setup]
 AppId={{C5CC4C3F-45E4-49D5-81D0-512D33C18C52}
 AppName=MPC-HC Audio Mixer
-AppVersion=2.8.3.7
-AppVerName=MPC-HC Audio Mixer 2.8.3.7
+AppVersion=0.2.0
+AppVerName=MPC-HC Audio Mixer 0.2.0
 AppPublisher=MPC-HC Audio Mixer - version personnalisée
 AppPublisherURL=https://github.com/clsid2/mpc-hc
 DefaultDirName={localappdata}\Programs\MPC-HC Audio Mixer

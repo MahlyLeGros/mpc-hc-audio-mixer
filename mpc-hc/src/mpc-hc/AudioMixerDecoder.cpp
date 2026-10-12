@@ -114,13 +114,10 @@ bool OpenFormat(const std::wstring& path, AVFormatContext** format, std::wstring
 }
 
 std::shared_ptr<Session> Probe(const std::wstring& path, int selected, std::wstring& error) {
-    const auto dot = path.find_last_of(L'.');
-    std::wstring ext = dot == std::wstring::npos ? L"" : path.substr(dot);
-    std::transform(ext.begin(), ext.end(), ext.begin(), towlower);
     const DWORD attrs = GetFileAttributesW(path.c_str());
-    if ((ext != L".mkv" && ext != L".mp4") || attrs == INVALID_FILE_ATTRIBUTES ||
+    if (!SupportsContainer(path) || attrs == INVALID_FILE_ATTRIBUTES ||
         (attrs & FILE_ATTRIBUTE_DIRECTORY) || path.find(L"://") != std::wstring::npos || path.rfind(L"\\\\", 0) == 0) {
-        error = L"The mixer supports local MKV and MP4 files"; return {};
+        error = L"The mixer supports local MKV, MP4, MOV, AVI and WebM files"; return {};
     }
     AVFormatContext* format = nullptr;
     if (!OpenFormat(path, &format, error)) return {};

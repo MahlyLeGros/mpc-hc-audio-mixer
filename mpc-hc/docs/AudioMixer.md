@@ -1,7 +1,7 @@
 # Mélangeur de pistes audio — version expérimentale
 
 Cette version dédiée de MPC-HC ajoute le mixage simultané des pistes audio
-internes des fichiers MKV et MP4 locaux. Elle ne modifie jamais le média.
+internes des fichiers MKV, MP4, MOV, AVI et WebM locaux. Elle ne modifie jamais le média.
 
 ## Installation Windows
 
@@ -20,7 +20,7 @@ La désinstallation conserve le fichier de réglages personnel.
 
 ## Utilisation
 
-1. Ouvrir une vidéo MKV ou MP4 dans cette version de MPC-HC.
+1. Ouvrir une vidéo MKV, MP4, MOV, AVI ou WebM dans cette version de MPC-HC.
 2. Cliquer sur l’**icône de mélangeur (trois curseurs)**, à droite dans la
    barre des commandes, juste à gauche du haut-parleur et du volume.
    Une petite fenêtre attachée au bouton s’ouvre au-dessus des commandes.

@@ -18,7 +18,7 @@ int wmain(int argc, wchar_t** argv) {
         Decoder unopened;
         std::vector<float> invalid;
         Check(!unopened.Read(0, 480, invalid, error), "unopened decoder fails safely");
-        for (const auto* name : {L"two-tracks.mkv", L"three-tracks.mkv", L"three-tracks.mp4"}) {
+        for (const auto* name : {L"two-tracks.mkv", L"three-tracks.mkv", L"three-tracks.mp4", L"three-tracks.mov", L"three-tracks.avi", L"three-tracks.webm"}) {
             auto session = Probe(dir + L"\\" + name, 1, error);
             if (!session) std::wcerr << error << L'\n';
             Check(bool(session), "probe");

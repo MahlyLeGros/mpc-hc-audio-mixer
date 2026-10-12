@@ -47,7 +47,7 @@ $previous = if (Test-Path -LiteralPath $ini) { [IO.File]::ReadAllBytes($ini) } e
 $player = $null
 try {
     Set-Content -LiteralPath $ini -Encoding Unicode -Value "[Settings]`r`nUpdaterAutoCheck=0"
-    $media = Join-Path $repo $(if ($SingleTrack) { 'bin/mixer-tests/media/one-track.mp4' } else { ("bin/mixer-tests/media/"+$MediaName) })
+    $media = Join-Path $repo $(if ($SingleTrack) { ('bin/mixer-tests/media/one-track'+[IO.Path]::GetExtension($MediaName)) } else { ("bin/mixer-tests/media/"+$MediaName) })
     $player = Start-Process -FilePath $binary -ArgumentList @('/new','/nofocus','/fixedsize','1100,700,-25000,-25000','/volume','0','/play',('"'+$media+'"')) -WindowStyle Hidden -PassThru
     $deadline = [DateTime]::UtcNow.AddSeconds(15)
     do { Start-Sleep -Milliseconds 200; $player.Refresh(); $frame = $player.MainWindowHandle } while ($frame -eq [IntPtr]::Zero -and [DateTime]::UtcNow -lt $deadline)

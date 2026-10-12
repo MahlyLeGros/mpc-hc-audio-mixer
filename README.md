@@ -17,7 +17,7 @@ puis **Définir par défaut**, ou choisir les formats vidéo souhaités.
 
 ## Mélangeur
 
-- Ouvrir une vidéo MKV ou MP4 contenant plusieurs pistes audio.
+- Ouvrir une vidéo MKV, MP4, MOV, AVI ou WebM contenant plusieurs pistes audio.
 - Cliquer sur l’icône à trois curseurs, près du volume en bas à droite.
 - Régler chaque piste indépendamment ; le volume natif reste le volume général.
 - Les niveaux horizontaux affichent le signal source, même si la piste est à 0 %.
@@ -44,7 +44,7 @@ La base exacte et les révisions des dépendances figurent dans
 
 ## Limites
 
-Le mixage simultané concerne les pistes internes des MKV/MP4 locaux,
+Le mixage simultané concerne les pistes internes des MKV/MP4/MOV/AVI/WebM locaux,
 avec une sortie stéréo à vitesse normale. Les autres formats utilisent
 la lecture habituelle. Aucun export du mixage ni réglage mémorisé entre fichiers.
 

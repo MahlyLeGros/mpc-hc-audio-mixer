@@ -1,18 +1,16 @@
-# MPC-HC Audio Mixer 0.1.0
+# MPC-HC Audio Mixer 0.2.0
 
-Première version distribuée avec un installateur Windows x64.
+Le mélangeur prend maintenant en charge les fichiers locaux **MOV, AVI et WebM**, en plus des MKV et MP4, lorsqu’ils contiennent plusieurs pistes audio distinctes.
 
-- Mixage simultané des pistes internes MKV et MP4, volumes indépendants.
-- Panneau compact attaché au lecteur, accessible près du volume.
-- Indicateurs horizontaux avant volume, synchronisés sur la position de lecture.
-- Installateur avec raccourci, désinstallation et inscription dans les applications par défaut.
+- Même panneau compact, volumes indépendants et indicateurs avant volume.
+- Vérification des trois nouveaux formats : décodage de trois pistes, pistes décalées, pause/reprise, déplacements répétés et fin de lecture.
+- Vérification dans le lecteur : accès au mélangeur, commandes de volume et désactivation du bouton pour les fichiers à une seule piste.
+- Tests hors ligne sur une chronologie de 30 minutes ; ils ne constituent pas une mesure physique du décalage écran/haut-parleurs.
 
-## Fichiers à télécharger
+## Installation ou mise à jour
 
-**MPC-HC-AudioMixer-Setup-x64.exe** : installer le lecteur sur Windows 10/11 64 bits.
+Fermer le lecteur, télécharger **MPC-HC-AudioMixer-Setup-x64.exe**, puis lancer l’installateur. Windows 10/11, 64 bits. Les réglages existants sont conservés.
 
-**MPC-HC-AudioMixer-Sources-completes.zip** : sources complètes, dépendances,
-licences et instructions de compilation.
+**MPC-HC-AudioMixer-Sources-completes.zip** contient les sources modifiées, les dépendances, les licences et les instructions de compilation.
 
-Les fichiers `.sha256` permettent de vérifier les téléchargements.
-La version 0.1.0 désigne notre ajout ; la base MPC-HC est identifiée dans le manifeste des sources.
+Les fichiers `.sha256` permettent de vérifier les téléchargements. Version personnalisée indépendante du projet officiel MPC-HC, distribuée sous GPL-3.0-or-later.

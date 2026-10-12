@@ -4,8 +4,7 @@
 
 bool CMainFrame::CanMixAudio() {
     if (!IsStateLoaded() || GetPlaybackMode() != PM_FILE || m_audioMixReload) return false;
-    CString ext = lastOpenFile.Right(4); ext.MakeLower();
-    if (ext != L".mkv" && ext != L".mp4") return false;
+    if (!AudioMix::SupportsContainer(lastOpenFile.GetString())) return false;
     if (m_audioMixSession) return m_audioMixSession->tracks.size() > 1;
     DWORD count = 0;
     if (m_pAudioSwitcherSS && SUCCEEDED(m_pAudioSwitcherSS->Count(&count))) return count > 1;

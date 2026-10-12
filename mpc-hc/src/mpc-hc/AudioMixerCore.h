@@ -7,11 +7,20 @@
 #include <string>
 #include <vector>
 #include <deque>
+#include <cwctype>
 
 namespace AudioMix {
 constexpr int SampleRate = 48000;
 constexpr int Channels = 2;
 constexpr int BlockFrames = 480;
+
+inline bool SupportsContainer(const std::wstring& path) {
+    const auto dot = path.find_last_of(L'.');
+    if (dot == std::wstring::npos) return false;
+    std::wstring ext = path.substr(dot);
+    std::transform(ext.begin(), ext.end(), ext.begin(), [](wchar_t c) { return wchar_t(std::towlower(c)); });
+    return ext == L".mkv" || ext == L".mp4" || ext == L".mov" || ext == L".avi" || ext == L".webm";
+}
 
 struct Track {
     int streamIndex = -1;

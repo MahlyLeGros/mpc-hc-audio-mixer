@@ -35,4 +35,5 @@ run('long-30min.mp4', ['-f', 'lavfi', '-i', 'color=c=black:size=64x64:rate=25:du
 (out / 'manifest.json').write_text(json.dumps({'duration_seconds': 8, 'delayed_track_start_seconds': 1.25,
     'delayed_track_end_seconds': 4.25, 'long_duration_seconds': 1800,
     'long_markers': 'white video flash and a 20ms audio pulse every second'}, indent=2))
+subprocess.run([sys.executable, str(Path(__file__).with_name('make-format-fixtures.py')), ffmpeg, str(out)], check=True)
 print(out)

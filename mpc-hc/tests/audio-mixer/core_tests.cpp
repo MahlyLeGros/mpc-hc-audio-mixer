@@ -10,6 +10,9 @@ void Near(float a, float b, const char* message) { Check(std::abs(a - b) < 0.000
 
 int main() {
     try {
+        for (auto path : {L"video.mkv", L"video.mp4", L"video.MOV", L"video.AVI", L"video.WEBM"})
+            Check(SupportsContainer(path), "supported container including case and five-character extension");
+        Check(!SupportsContainer(L"audio.wav") && !SupportsContainer(L"no-extension"), "unsupported container rejected");
         std::vector<Track> tracks(3);
         tracks[0].volume = 1;
         tracks[1].volume = 0.5f;
