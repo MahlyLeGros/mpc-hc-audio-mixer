@@ -1,0 +1,86 @@
+stages:
+    - build
+
+variables:
+    GIT_SUBMODULE_STRATEGY: normal
+
+build-debian:
+    image: registry.videolan.org/dav1d-debian-unstable:20250207200301
+    stage: build
+    except:
+        - schedules
+    tags:
+        - docker
+        - amd64
+    script:
+        - meson setup build
+        - meson compile -C build
+
+build-macos:
+    stage: build
+    except:
+        - schedules
+    tags:
+        - amd64
+        - macos
+    script:
+        - CONTRIB_TARBALL=`curl -s https://artifacts.videolan.org/vlc/macos-x86_64/SHA512SUM 2>/dev/null | cut -d '/' -f 2`
+        - curl -sS -O https://artifacts.videolan.org/vlc/macos-x86_64/$CONTRIB_TARBALL
+        - tar xf "$CONTRIB_TARBALL"
+        - cd x86_64-apple-darwin19
+        - curl -sS -o ./change_prefix.sh 'https://code.videolan.org/videolan/vlc/-/raw/master/contrib/src/change_prefix.sh'
+        - chmod +x ./change_prefix.sh
+        - ./change_prefix.sh
+        - export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:`pwd -P`/lib/pkgconfig/"
+        - cd ../
+        - export PATH="/Users/videolanci/sandbox/bin:$PATH"
+        - meson setup build
+        - meson compile -C build
+
+build-win:
+    image: registry.videolan.org/dav1d-debian-unstable:20250207200301
+    stage: build
+    except:
+        - schedules
+    tags:
+        - docker
+        - amd64
+    script:
+        - meson setup build --cross-file package/crossfiles/${CROSSFILE}.meson
+        - meson compile -C build
+    parallel:
+      matrix:
+        - CROSSFILE: [i686-w64-mingw32, x86_64-w64-mingw32]
+
+build-win-arm:
+    image: registry.videolan.org/vlc-debian-llvm-msvcrt:20250305204125
+    stage: build
+    except:
+        - schedules
+    tags:
+        - docker
+        - amd64
+    script:
+        - meson setup build --cross-file package/crossfiles/${CROSSFILE}.meson
+        - meson compile -C build
+    parallel:
+      matrix:
+        - CROSSFILE: [armv7-w64-mingw32, aarch64-w64-mingw32]
+
+pages:
+    stage: build
+    image:
+        name: registry.videolan.org/vlc-debian-unstable:20250323132008
+    tags:
+        - docker
+        - amd64
+    script:
+        - meson setup build -Denable_docs=true
+        - meson compile -C build
+        - doxygen build/doc/Doxyfile
+        - mv build/doc/html public
+    artifacts:
+        paths:
+            - public
+    only:
+        - schedules

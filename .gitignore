@@ -1,0 +1,6 @@
+*.exe
+*.zip
+**/bin/
+**/obj/
+**/build.user.bat
+**/*.log

@@ -1,0 +1,2105 @@
+# MPC-HC - Strings extracted from dialogs
+# Copyright (C) 2002 - 2017 see Authors.txt
+# This file is distributed under the same license as the MPC-HC package.
+# Translators:
+# MPC HC <adiposegithub@gmail.com>, 2020
+# Michał Trzebiatowski <michtrz@gmail.com>, 2020
+# Krzysztof, 2024
+# Mirosław Żylewicz, 2025
+# Łukasz Janik, 2026
+# Transifex sync (Studio), 2026
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: MPC-HC\n"
+"POT-Creation-Date: 2026-07-18 21:00:08+0000\n"
+"PO-Revision-Date: 2026-09-30 21:28+0000\n"
+"Last-Translator: Transifex sync (Studio)\n"
+"Language-Team: Polish (https://app.transifex.com/mpchc/teams/106126/pl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pl\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
+
+msgctxt "IDD_SELECTMEDIATYPE_CAPTION"
+msgid "Select Media Type"
+msgstr "Wybierz typ mediów"
+
+msgctxt "IDD_SELECTMEDIATYPE_IDOK"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "IDD_SELECTMEDIATYPE_IDCANCEL"
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgctxt "IDD_CAPTURE_DLG_IDC_STATIC1"
+msgid "Video"
+msgstr "Wideo"
+
+msgctxt "IDD_CAPTURE_DLG_IDC_BUTTON1"
+msgid "Set"
+msgstr "Ustaw"
+
+msgctxt "IDD_CAPTURE_DLG_IDC_STATIC"
+msgid "Audio"
+msgstr "Dźwięk"
+
+msgctxt "IDD_CAPTURE_DLG_IDC_STATIC"
+msgid "Output"
+msgstr "Wyjście"
+
+msgctxt "IDD_CAPTURE_DLG_IDC_CHECK1"
+msgid "Record Video"
+msgstr "Nagraj wideo"
+
+msgctxt "IDD_CAPTURE_DLG_IDC_CHECK2"
+msgid "Preview"
+msgstr "Podgląd"
+
+msgctxt "IDD_CAPTURE_DLG_IDC_CHECK3"
+msgid "Record Audio"
+msgstr "Nagraj dźwięk"
+
+msgctxt "IDD_CAPTURE_DLG_IDC_CHECK4"
+msgid "Preview"
+msgstr "Podgląd"
+
+msgctxt "IDD_CAPTURE_DLG_IDC_STATIC"
+msgid "V/A Buffers:"
+msgstr "Bufory wideo/audio:"
+
+msgctxt "IDD_CAPTURE_DLG_IDC_CHECK5"
+msgid "Audio to wav"
+msgstr "Dźwięk do wav"
+
+msgctxt "IDD_CAPTURE_DLG_IDC_BUTTON2"
+msgid "Record"
+msgstr "Nagraj"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_CHECK2"
+msgid "Enable built-in audio switcher filter (requires restart)"
+msgstr "Włącz wbudowany filtr przełączania audio (wymaga restartu)"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_CHECK5"
+msgid "Normalize"
+msgstr "Normalizuj"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC4"
+msgid "Max amplification:"
+msgstr "Maksymalne wzmocnienie:"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC5"
+msgid "%"
+msgstr "%"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_CHECK6"
+msgid "Regain volume"
+msgstr "Utrzymuj głośność"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC6"
+msgid "Boost:"
+msgstr "Wzmocnienie:"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC7"
+msgid "ReplayGain:"
+msgstr "ReplayGain:"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC8"
+msgid "Preamp (dB):"
+msgstr "Wzmocnienie wstępne (dB):"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_CHECK7"
+msgid "Prevent clipping"
+msgstr "Zapobiegaj przesterowaniu"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_CHECK4"
+msgid "Audio time shift (ms):"
+msgstr "Przesunięcie czasu dźwięku (ms):"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_CHECK1"
+msgid "Enable custom channel mapping"
+msgstr "Włącz własne mapowanie kanałów"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC_CM1"
+msgid "Speaker configuration for"
+msgstr "Konfiguracja głośników dla"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC_CM2"
+msgid "input channels:"
+msgstr "kanały wejściowe:"
+
+msgctxt "IDD_PPAGEAUDIOSWITCHER_IDC_STATIC_CM3"
+msgid "Hold shift for immediate changes when clicking something"
+msgstr "Przytrzymaj Shift, by zastosować zmiany natychmiast"
+
+msgctxt "IDD_GOTO_DLG_CAPTION"
+msgid "Go To..."
+msgstr "Przejdź do..."
+
+msgctxt "IDD_GOTO_DLG_IDC_STATIC"
+msgid ""
+"Enter a timecode using the format [hh:]mm:ss.ms to jump to a specified time."
+" You do not need to enter the separators explicitly."
+msgstr ""
+"Wprowadź kod czasowy w formacie [hh:]mm:ss.ms, aby przejść do określonego "
+"momentu. Nie musisz wpisywać separatorów."
+
+msgctxt "IDD_GOTO_DLG_IDC_STATIC"
+msgid "Time"
+msgstr "Czas"
+
+msgctxt "IDD_GOTO_DLG_IDC_OK1"
+msgid "Go!"
+msgstr "Przejdź!"
+
+msgctxt "IDD_GOTO_DLG_IDC_STATIC"
+msgid ""
+"Enter two numbers to jump to a specified frame, the first is the frame "
+"number, the second is the frame rate."
+msgstr ""
+"Wprowadź dwie liczby, aby przejść do określonej klatki: pierwsza to numer "
+"klatki, druga to liczba klatek na sekundę."
+
+msgctxt "IDD_GOTO_DLG_IDC_STATIC"
+msgid "Frame"
+msgstr "Klatka"
+
+msgctxt "IDD_GOTO_DLG_IDC_OK2"
+msgid "Go!"
+msgstr "Przejdź!"
+
+msgctxt "IDD_OPEN_DLG_CAPTION"
+msgid "Open"
+msgstr "Otwórz"
+
+msgctxt "IDD_OPEN_DLG_IDC_STATIC"
+msgid ""
+"Type the address of a movie or audio file (on the Internet or your computer)"
+" and the player will open it for you."
+msgstr ""
+"Wpisz adres filmu lub pliku audio (z Internetu lub z komputera), a "
+"odtwarzacz go otworzy."
+
+msgctxt "IDD_OPEN_DLG_IDC_STATIC"
+msgid "Open:"
+msgstr "Otwórz:"
+
+msgctxt "IDD_OPEN_DLG_IDC_BUTTON1"
+msgid "Browse..."
+msgstr "Przeglądaj..."
+
+msgctxt "IDD_OPEN_DLG_IDC_STATIC1"
+msgid "Dub:"
+msgstr "Dubbing:"
+
+msgctxt "IDD_OPEN_DLG_IDC_BUTTON2"
+msgid "Browse..."
+msgstr "Przeglądaj..."
+
+msgctxt "IDD_OPEN_DLG_IDC_CHECK1"
+msgid "Add to playlist without opening"
+msgstr "Dodaj do listy odtwarzania bez otwierania"
+
+msgctxt "IDD_OPEN_DLG_IDOK"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "IDD_OPEN_DLG_IDCANCEL"
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgctxt "IDD_ABOUTBOX_CAPTION"
+msgid "About"
+msgstr "O programie"
+
+msgctxt "IDD_ABOUTBOX_IDC_STATIC"
+msgid ""
+"This program is freeware and released under the GNU General Public License."
+msgstr ""
+"Ten program jest darmowy i został wydany na licencji GNU General Public "
+"License."
+
+msgctxt "IDD_ABOUTBOX_IDC_STATIC"
+msgid "English translation made by MPC-HC Team"
+msgstr "Tłumaczenie: Łukasz Janik, kangurek_kao, Mirosław Żylewicz"
+
+msgctxt "IDD_ABOUTBOX_IDC_STATIC"
+msgid "Build information"
+msgstr "Informacje o kompilacji"
+
+msgctxt "IDD_ABOUTBOX_IDC_STATIC"
+msgid "Version:"
+msgstr "Wersja:"
+
+msgctxt "IDD_ABOUTBOX_IDC_STATIC"
+msgid "Build date:"
+msgstr "Data kompilacji:"
+
+msgctxt "IDD_ABOUTBOX_IDC_LAVFILTERS_VERSION"
+msgid "Not used"
+msgstr "Nie użyto"
+
+msgctxt "IDD_ABOUTBOX_IDC_STATIC"
+msgid "Operating system"
+msgstr "System operacyjny"
+
+msgctxt "IDD_ABOUTBOX_IDC_STATIC"
+msgid "Name:"
+msgstr "Nazwa:"
+
+msgctxt "IDD_ABOUTBOX_IDC_BUTTON1"
+msgid "Copy to clipboard"
+msgstr "Kopiuj do schowka"
+
+msgctxt "IDD_ABOUTBOX_IDOK"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_STATIC"
+msgid "Open options"
+msgstr "Ustawienia otwierania"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_RADIO1"
+msgid "Use the same player for each media file"
+msgstr "Używaj tego samego odtwarzacza dla każdego pliku"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_RADIO2"
+msgid "Open a new player for each media file played"
+msgstr "Otwieraj nowy odtwarzacz dla każdego pliku"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_STATIC"
+msgid "Title bar"
+msgstr "Pasek tytułu"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_RADIO3"
+msgid "Display full path"
+msgstr "Wyświetl pełną ścieżkę"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_RADIO4"
+msgid "File name only"
+msgstr "Tylko nazwa pliku"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_RADIO5"
+msgid "Don't prefix anything"
+msgstr "Nie dodawaj żadnego prefiksu"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_CHECK13"
+msgid "Replace file name with title"
+msgstr "Zastąp nazwę pliku tytułem"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_STATIC"
+msgid "Other"
+msgstr "Inne"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_CHECK3"
+msgid "Tray icon"
+msgstr "Ikona w zasobniku"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_CHECK8"
+msgid "Store settings in .ini file"
+msgstr "Zapisuj ustawienia w pliku .ini"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_CHECK10"
+msgid "Disable \"Open Disc\" menu"
+msgstr "Wyłącz menu „Otwórz płytę\""
+
+msgctxt "IDD_PPAGEPLAYER_IDC_CHECK9"
+msgid "Process priority above normal"
+msgstr "Priorytet procesu powyżej normalnego"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_CHECK14"
+msgid "Enable cover-art support"
+msgstr "Włącz obsługę okładek albumów"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_STATIC"
+msgid "History"
+msgstr "Historia"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_CHECK1"
+msgid "Keep history of recently opened files"
+msgstr "Zachowuj historię ostatnio otwieranych plików"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_CHECK2"
+msgid "Remember last playlist"
+msgstr "Zapamiętaj ostatnią listę odtwarzania"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_FILE_POS"
+msgid "Remember File position"
+msgstr "Zapamiętaj pozycję w pliku"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_DVD_POS"
+msgid "Remember DVD position"
+msgstr "Zapamiętaj pozycję DVD"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_CHECK6"
+msgid "Remember last window position"
+msgstr "Zapamiętaj ostatnią pozycję okna"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_CHECK7"
+msgid "Remember last window size"
+msgstr "Zapamiętaj ostatni rozmiar okna"
+
+msgctxt "IDD_PPAGEPLAYER_IDC_CHECK11"
+msgid "Remember last Pan && Scan Zoom"
+msgstr "Zapamiętaj ostatnie skalowanie i &kadrowanie"
+
+msgctxt "IDD_PPAGEDVD_IDC_STATIC"
+msgid "\"Open DVD/BD\" behavior"
+msgstr "Zachowanie „Otwórz DVD/BD\""
+
+msgctxt "IDD_PPAGEDVD_IDC_RADIO1"
+msgid "Prompt for location"
+msgstr "Pytaj o lokalizację"
+
+msgctxt "IDD_PPAGEDVD_IDC_RADIO2"
+msgid "Always open the default location:"
+msgstr "Zawsze otwieraj domyślną lokalizację:"
+
+msgctxt "IDD_PPAGEDVD_IDC_STATIC"
+msgid "Preferred language for DVD"
+msgstr "Preferowany język dla DVD"
+
+msgctxt "IDD_PPAGEDVD_IDC_RADIO3"
+msgid "Menu"
+msgstr "Menu"
+
+msgctxt "IDD_PPAGEDVD_IDC_RADIO4"
+msgid "Audio"
+msgstr "Dźwięk"
+
+msgctxt "IDD_PPAGEDVD_IDC_RADIO5"
+msgid "Subtitles"
+msgstr "Napisy"
+
+msgctxt "IDD_PPAGEDVD_IDC_STATIC"
+msgid "Additional settings"
+msgstr "Dodatkowe ustawienia"
+
+msgctxt "IDD_PPAGEDVD_IDC_CHECK2"
+msgid "Allow closed captions in \"Line 21 Decoder\""
+msgstr "Zezwalaj na napisy zamknięte w „dekoderze Line 21”"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "Audio"
+msgstr "Dźwięk"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "Volume"
+msgstr "Głośność"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "Min"
+msgstr "Min"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "Max"
+msgstr "Maks"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC_BALANCE"
+msgid "Balance"
+msgstr "Balans"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "L"
+msgstr "L"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "R"
+msgstr "P"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "Control"
+msgstr "Kontrola"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC5"
+msgid "Volume step:"
+msgstr "Zmiana głośności o:"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "%"
+msgstr "%"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC6"
+msgid "Speed step:"
+msgstr "Zmiana prędkości o:"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "Playback"
+msgstr "Odtwarzanie"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_RADIO1"
+msgid "Play"
+msgstr "Odtwórz"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_RADIO2"
+msgid "Repeat forever"
+msgstr "Ciągłe"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC1"
+msgid "time(s)"
+msgstr "raz(y)"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC7"
+msgid "Repeat mode:"
+msgstr "Tryb powtarzania:"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "After Playback"
+msgstr "Po zakończeniu odtwarzania"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "Zoom and Alignment"
+msgstr "Powiększenie i wyrównanie"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_CHECK5"
+msgid "Auto-zoom:"
+msgstr "Rozmiar okna:"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC2"
+msgid "Auto fit factor:"
+msgstr "Współczynnik dopasowania:"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "min %"
+msgstr "min %"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "max %"
+msgstr "maks %"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC4"
+msgid "Vertical Alignment:"
+msgstr "Wyrównanie w pionie:"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "Default track preference"
+msgstr "Domyślne preferencje ścieżki"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC8"
+msgid "Subtitles:"
+msgstr "Napisy:"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC9"
+msgid "Audio:"
+msgstr "Audio:"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_CHECK4"
+msgid "Allow overriding external splitter choice"
+msgstr "Zezwalaj na zmianę wyboru zewnętrznego splittera"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_STATIC"
+msgid "Open settings"
+msgstr "Otwórz ustawienia"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_CHECK7"
+msgid "Use worker thread to construct the filter graph"
+msgstr "Używaj wątku roboczego do tworzenia grafu filtrów"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_CHECK6"
+msgid "Report pins which fail to render"
+msgstr "Zgłaszaj piny, których nie udało się wyrenderować"
+
+msgctxt "IDD_PPAGEPLAYBACK_IDC_CHECK2"
+msgid "Auto-load audio files"
+msgstr "Automatycznie wczytuj pliki audio"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_CHECK3"
+msgid "Override placement"
+msgstr "Wymuś położenie"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC1"
+msgid "Horizontal:"
+msgstr "Poziomo:"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC2"
+msgid "%"
+msgstr "%"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC3"
+msgid "Vertical:"
+msgstr "Pionowo:"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC4"
+msgid "%"
+msgstr "%"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC"
+msgid "Delay step"
+msgstr "Skok opóźnienia"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC"
+msgid "ms"
+msgstr "ms"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC"
+msgid "Texture settings (open the video again to see the changes)"
+msgstr "Ustawienia tekstur (wymaga ponownego otworzenia pliku)"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC9"
+msgid "Sub pictures to buffer:"
+msgstr "Liczba buforowanych obrazów napisów:"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC21"
+msgid "Maximum texture resolution:"
+msgstr "Maksymalna rozdzielczość tekstur:"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_CHECK_NO_SUB_ANIM"
+msgid "Never animate the subtitles"
+msgstr "Nigdy nie animuj napisów"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC5"
+msgid "Render at"
+msgstr "Renderuj w"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC6"
+msgid "% of the animation"
+msgstr "% prędkości animacji"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC7"
+msgid "Animate at"
+msgstr "Animuj w"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC8"
+msgid "% of the video frame rate"
+msgstr "% prędkości klatek obrazu"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_CHECK_ALLOW_DROPPING_SUBPIC"
+msgid "Allow dropping some subpictures if the queue is running late"
+msgstr ""
+"Zezwalaj na pomijanie części obrazów napisów, jeśli kolejka się opóźnia"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC"
+msgid "Renderer Layout"
+msgstr "Układ renderera"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_CHECK_SUB_AR_COMPENSATION"
+msgid "Apply aspect ratio compensation for anamorphic videos"
+msgstr "Dopasuj proporcje napisów do materiałów anamorficznych"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC"
+msgid "Warning"
+msgstr "Ostrzeżenie"
+
+msgctxt "IDD_PPAGESUBTITLES_IDC_STATIC"
+msgid ""
+"If you override and enable fullscreen antialiasing somewhere at your "
+"videocard's settings, subtitles aren't going to look any better but it will "
+"surely eat your CPU."
+msgstr ""
+"Jeśli wymusisz i włączysz pełnoekranowe wygładzanie krawędzi w ustawieniach "
+"karty graficznej, napisy nie będą wyglądały lepiej, za to z pewnością "
+"zwiększy się obciążenie procesora."
+
+msgctxt "IDD_PPAGEFORMATS_IDC_STATIC2"
+msgid "File extensions"
+msgstr "Rozszerzenia plików"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_BUTTON2"
+msgid "Default"
+msgstr "Domyślne"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_BUTTON_EXT_SET"
+msgid "Set"
+msgstr "Ustaw"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_STATIC3"
+msgid "Association"
+msgstr "Powiązania"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_CHECK8"
+msgid "Use the format-specific icons"
+msgstr "Użyj ikon specyficznych dla formatu"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_BUTTON1"
+msgid "Run as &administrator"
+msgstr "Uruchom jako &administrator "
+
+msgctxt "IDD_PPAGEFORMATS_IDC_BUTTON7"
+msgid "Set as &default program"
+msgstr "Ustaw jako &domyślny program"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_STATIC"
+msgid "Explorer Context Menu"
+msgstr "Menu kontekstowe Eksploratora"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_CHECK6"
+msgid "Directory"
+msgstr "Katalog"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_CHECK7"
+msgid "Playlist"
+msgstr "Playlista"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_STATIC1"
+msgid "Autoplay"
+msgstr "Autoodtwarzanie"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_CHECK1"
+msgid "Video"
+msgstr "Wideo"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_CHECK2"
+msgid "Music"
+msgstr "Muzyka"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_CHECK4"
+msgid "DVD"
+msgstr "DVD"
+
+msgctxt "IDD_PPAGEFORMATS_IDC_CHECK3"
+msgid "Audio CD"
+msgstr "CD Audio"
+
+msgctxt "IDD_PPAGETWEAKS_IDC_STATIC"
+msgid "Jump distances (small, medium, large in ms)"
+msgstr "Czasy przeskoku (krótki, średni, długi w ms)"
+
+msgctxt "IDD_PPAGETWEAKS_IDC_BUTTON1"
+msgid "Default"
+msgstr "Domyślne"
+
+msgctxt "IDD_PPAGETWEAKS_IDC_CHECK3"
+msgid "Auto-hide the mouse pointer during playback in windowed mode"
+msgstr ""
+"Automatycznie ukrywaj kursor myszy podczas odtwarzania w trybie okienkowym"
+
+msgctxt "IDD_PPAGETWEAKS_IDC_CHECK_LCD"
+msgid "Enable Logitech LCD support (experimental)"
+msgstr "Włącz obsługę wyświetlaczy LCD Logitech (eksperymentalne)"
+
+msgctxt "IDD_PPAGETWEAKS_IDC_CHECK6"
+msgid ""
+"Prevent minimizing the player when in fullscreen on a non default monitor"
+msgstr ""
+"Zapobiegaj minimalizowaniu odtwarzacza w trybie pełnoekranowym na monitorze "
+"innym niż domyślny"
+
+msgctxt "IDD_PPAGETWEAKS_IDC_CHECK7"
+msgid ""
+"Open previous/next file in folder on \"Skip back/forward\" when there is "
+"only one item in playlist"
+msgstr ""
+"Otwieraj poprzedni/następny plik w folderze po użyciu „Wstecz/Dalej”, gdy na"
+" liście odtwarzania znajduje się tylko jeden element"
+
+msgctxt "IDD_PPAGETWEAKS_IDC_FASTSEEK_CHECK"
+msgid "Fast seek (on keyframe)"
+msgstr "Szybkie przewijanie (do klatek kluczowych)"
+
+msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_BUTTON1"
+msgid "Add Filter..."
+msgstr "Dodaj filtr..."
+
+msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_BUTTON2"
+msgid "Remove"
+msgstr "Usuń"
+
+msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_RADIO1"
+msgid "Prefer"
+msgstr "Preferuj"
+
+msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_RADIO2"
+msgid "Block"
+msgstr "Blokuj"
+
+msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_RADIO3"
+msgid "Set merit:"
+msgstr "Ustaw priorytet:"
+
+msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_BUTTON3"
+msgid "Up"
+msgstr "W górę"
+
+msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_BUTTON4"
+msgid "Down"
+msgstr "W dół"
+
+msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_BUTTON5"
+msgid "Add Media Type..."
+msgstr "Dodaj typ mediów..."
+
+msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_BUTTON6"
+msgid "Add Sub Type..."
+msgstr "Dodaj typ napisów…"
+
+msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_BUTTON7"
+msgid "Delete"
+msgstr "Usuń"
+
+msgctxt "IDD_PPAGEEXTERNALFILTERS_IDC_BUTTON8"
+msgid "Reset List"
+msgstr "Resetuj listę"
+
+msgctxt "IDD_FILEPROPDETAILS_IDC_STATIC"
+msgid "Type:"
+msgstr "Typ:"
+
+msgctxt "IDD_FILEPROPDETAILS_IDC_STATIC"
+msgid "Size:"
+msgstr "Rozmiar:"
+
+msgctxt "IDD_FILEPROPDETAILS_IDC_STATIC"
+msgid "Media length:"
+msgstr "Czas trwania:"
+
+msgctxt "IDD_FILEPROPDETAILS_IDC_STATIC"
+msgid "Video size:"
+msgstr "Rozmiar obrazu:"
+
+msgctxt "IDD_FILEPROPDETAILS_IDC_STATIC"
+msgid "Created:"
+msgstr "Utworzony:"
+
+msgctxt "IDD_FILEPROPCLIP_IDC_STATIC"
+msgid "Clip:"
+msgstr "Klip:"
+
+msgctxt "IDD_FILEPROPCLIP_IDC_STATIC"
+msgid "Author:"
+msgstr "Autor:"
+
+msgctxt "IDD_FILEPROPCLIP_IDC_STATIC"
+msgid "Copyright:"
+msgstr "Prawa autorskie:"
+
+msgctxt "IDD_FILEPROPCLIP_IDC_STATIC"
+msgid "Rating:"
+msgstr "Ocena:"
+
+msgctxt "IDD_FILEPROPCLIP_IDC_STATIC"
+msgid "Location:"
+msgstr "Lokalizacja:"
+
+msgctxt "IDD_FILEPROPCLIP_IDC_STATIC"
+msgid "Description:"
+msgstr "Opis:"
+
+msgctxt "IDD_FAVADD_CAPTION"
+msgid "Add Favorite"
+msgstr "Dodaj do ulubionych"
+
+msgctxt "IDD_FAVADD_IDC_STATIC1"
+msgid "Choose a name for your shortcut:"
+msgstr "Wybierz nazwę skrótu:"
+
+msgctxt "IDD_FAVADD_IDC_CHECK1"
+msgid "Remember position"
+msgstr "Zapamiętuj pozycję"
+
+msgctxt "IDD_FAVADD_IDC_CHECK3"
+msgid "Remember A-B repeat marks"
+msgstr "Zapamiętuj znaczniki powtórki A-B"
+
+msgctxt "IDD_FAVADD_IDC_CHECK2"
+msgid "Relative drive"
+msgstr "Napęd względny"
+
+msgctxt "IDD_FAVADD_IDOK"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "IDD_FAVADD_IDCANCEL"
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgctxt "IDD_FAVORGANIZE_CAPTION"
+msgid "Organize Favorites"
+msgstr "Edytuj ulubione"
+
+msgctxt "IDD_FAVORGANIZE_IDC_BUTTON1"
+msgid "Rename"
+msgstr "Zmień nazwę"
+
+msgctxt "IDD_FAVORGANIZE_IDC_BUTTON3"
+msgid "Move Up"
+msgstr "W górę"
+
+msgctxt "IDD_FAVORGANIZE_IDC_BUTTON4"
+msgid "Move Down"
+msgstr "W dół"
+
+msgctxt "IDD_FAVORGANIZE_IDC_BUTTON2"
+msgid "Delete"
+msgstr "Usuń"
+
+msgctxt "IDD_FAVORGANIZE_IDOK"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "IDD_FAVORGANIZE_IDCANCEL"
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgctxt "IDD_FAVORGANIZE_ID_APPLY_NOW"
+msgid "Apply"
+msgstr "Zastosuj"
+
+msgctxt "IDD_PNSPRESET_DLG_CAPTION"
+msgid "PnS Frame Adjust Presets"
+msgstr "Presety kadrowania PnS"
+
+msgctxt "IDD_PNSPRESET_DLG_IDC_BUTTON2"
+msgid "New"
+msgstr "Nowy"
+
+msgctxt "IDD_PNSPRESET_DLG_IDC_BUTTON3"
+msgid "Delete"
+msgstr "Usuń"
+
+msgctxt "IDD_PNSPRESET_DLG_IDC_BUTTON4"
+msgid "Up"
+msgstr "W górę"
+
+msgctxt "IDD_PNSPRESET_DLG_IDC_BUTTON5"
+msgid "Down"
+msgstr "W dół"
+
+msgctxt "IDD_PNSPRESET_DLG_IDC_BUTTON1"
+msgid "&Set"
+msgstr "&Ustaw"
+
+msgctxt "IDD_PNSPRESET_DLG_IDCANCEL"
+msgid "&Cancel"
+msgstr "&Anuluj"
+
+msgctxt "IDD_PNSPRESET_DLG_IDOK"
+msgid "&Save"
+msgstr "&Zapisz"
+
+msgctxt "IDD_PNSPRESET_DLG_IDC_STATIC2"
+msgid "Pos: 0.0 -> 1.0"
+msgstr "Pozycja: 0.0 -> 1.0"
+
+msgctxt "IDD_PNSPRESET_DLG_IDC_STATIC3"
+msgid "Zoom: 0.2 -> 3.0"
+msgstr "Powiększ: 0.2 -> 3.0"
+
+msgctxt "IDD_PPAGEACCELTBL_CAPTION"
+msgid "Shortcut Keys"
+msgstr "Skróty klawiszowe"
+
+msgctxt "IDD_PPAGEACCELTBL_IDC_CHECK2"
+msgid "Global Media Keys"
+msgstr "Globalne klawisze multimedialne"
+
+msgctxt "IDD_PPAGEACCELTBL_IDC_BUTTON1"
+msgid "Select All"
+msgstr "Zaznacz wszystkie"
+
+msgctxt "IDD_PPAGEACCELTBL_IDC_BUTTON2"
+msgid "Reset Selected"
+msgstr "Resetuj zaznaczone"
+
+msgctxt "IDD_MEDIATYPES_DLG_CAPTION"
+msgid "Warning"
+msgstr "Ostrzeżenie"
+
+msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC1"
+msgid ""
+"MPC-HC could not render some of the pins in the graph, you may not have the "
+"needed codecs or filters installed on the system."
+msgstr ""
+"MPC-HC nie mógł zrenderować niektórych pinów w grafie - możliwe, że brakuje "
+"wymaganych kodeków lub filtrów w systemie."
+
+msgctxt "IDD_MEDIATYPES_DLG_IDC_STATIC2"
+msgid "The following pin(s) failed to find a connectable filter:"
+msgstr ""
+"Następujące pin(y) nie mogły znaleźć filtra, z którym można je połączyć:"
+
+msgctxt "IDD_MEDIATYPES_DLG_IDOK"
+msgid "Close"
+msgstr "Zamknij"
+
+msgctxt "IDD_SAVE_DLG_CAPTION"
+msgid "Saving..."
+msgstr "Zapisywanie..."
+
+msgctxt "IDD_SAVE_DLG_IDCANCEL"
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgctxt "IDD_ADDREGFILTER_CAPTION"
+msgid "Select Filter"
+msgstr "Wybierz filtr"
+
+msgctxt "IDD_ADDREGFILTER_IDC_BUTTON1"
+msgid "Browse..."
+msgstr "Przeglądaj..."
+
+msgctxt "IDD_ADDREGFILTER_IDOK"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "IDD_ADDREGFILTER_IDCANCEL"
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC"
+msgid "Font"
+msgstr "Czcionka"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_BUTTON1"
+msgid "Font"
+msgstr "Czcionka"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC1"
+msgid "Spacing"
+msgstr "Odstępy"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC2"
+msgid "Angle (z,°)"
+msgstr "Kąt (z,°)"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC3"
+msgid "Scale (x,%)"
+msgstr "Skala (x,%)"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC4"
+msgid "Scale (y,%)"
+msgstr "Skala (y,%)"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC"
+msgid "Border Style"
+msgstr "Styl obramowania"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_RADIO1"
+msgid "Outline"
+msgstr "Zarys"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_RADIO2"
+msgid "Opaque box"
+msgstr "Jednolite tło"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC5"
+msgid "Width"
+msgstr "Szerokość"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC6"
+msgid "Shadow"
+msgstr "Cień"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC"
+msgid "Screen Alignment && Margins"
+msgstr "Wyrównanie ekranu i &marginesy"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC7"
+msgid "Left"
+msgstr "Lewo"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC9"
+msgid "Top"
+msgstr "Góra"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC8"
+msgid "Right"
+msgstr "Prawo"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC10"
+msgid "Bottom"
+msgstr "Dół"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_CHECK_RELATIVETO"
+msgid "Position subtitles relative to the video frame"
+msgstr "Pozycjonuj napisy względem klatki wideo"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC"
+msgid "Colors && Transparency"
+msgstr "Kolory i &przezroczystość"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC"
+msgid "0%"
+msgstr "0%"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC"
+msgid "100%"
+msgstr "100%"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC"
+msgid "Primary"
+msgstr "Podstawowy"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC"
+msgid "Secondary"
+msgstr "Drugorzędny"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC"
+msgid "Outline"
+msgstr "Zarys"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC"
+msgid "Shadow"
+msgstr "Cień"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_CHECK1"
+msgid "Link alpha channels"
+msgstr "Połącz kanały alfa"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC21"
+msgid "8-bit Character Set"
+msgstr "8-bitowy zestaw znaków"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC22"
+msgid "OpenType Language"
+msgstr "Język OpenType"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_STATIC_LIBASS"
+msgid "Libass Options"
+msgstr "Opcje libass"
+
+msgctxt "IDD_PPAGESUBSTYLE_IDC_CHECK2"
+msgid "Use libass for SSA/ASS"
+msgstr "Używaj libass dla SSA/ASS"
+
+msgctxt "IDD_PPAGEMOUSE_IDC_STATIC"
+msgid "Buttons"
+msgstr "Przyciski"
+
+msgctxt "IDD_PPAGEMOUSE_IDC_STATIC"
+msgid "Click"
+msgstr "Klik"
+
+msgctxt "IDD_PPAGEMOUSE_IDC_STATIC"
+msgid "Double click"
+msgstr "Podwójny klik"
+
+msgctxt "IDD_PPAGEMOUSE_IDC_STATIC"
+msgid "Right click"
+msgstr "Prawy klik"
+
+msgctxt "IDD_PPAGEMOUSE_IDC_BUTTON2"
+msgid "Default"
+msgstr "Domyślne"
+
+msgctxt "IDD_PPAGEINTERNALFILTERS_IDC_STATIC"
+msgid ""
+"If you would like to use the stand-alone versions of these filters or "
+"another replacement, disable them here."
+msgstr ""
+"Jeśli chcesz używać samodzielnych wersji tych filtrów lub innych "
+"zamienników, wyłącz je tutaj."
+
+msgctxt "IDD_PPAGEINTERNALFILTERS_IDC_STATIC"
+msgid "Source Filters"
+msgstr "Filtry źródłowe"
+
+msgctxt "IDD_PPAGEINTERNALFILTERS_IDC_STATIC"
+msgid "Transform Filters"
+msgstr "Filtry przetwarzające"
+
+msgctxt "IDD_PPAGEINTERNALFILTERS_IDC_STATIC"
+msgid "Internal LAV Filters settings"
+msgstr "Ustawienia wewnętrznych filtrów LAV Filters"
+
+msgctxt "IDD_PPAGEINTERNALFILTERS_IDC_SPLITTER_CONF"
+msgid "Splitter"
+msgstr "Splitter"
+
+msgctxt "IDD_PPAGEINTERNALFILTERS_IDC_VIDEO_DEC_CONF"
+msgid "Video decoder"
+msgstr "Dekoder wideo"
+
+msgctxt "IDD_PPAGEINTERNALFILTERS_IDC_AUDIO_DEC_CONF"
+msgid "Audio decoder"
+msgstr "Dekoder audio"
+
+msgctxt "IDD_PPAGELOGO_IDC_CHECK1"
+msgid "Apply Monitor Color Profile"
+msgstr "Zastosuj profil kolorów monitora"
+
+msgctxt "IDD_PPAGELOGO_IDC_RADIO1"
+msgid "Internal:"
+msgstr "Wewnętrzne:"
+
+msgctxt "IDD_PPAGELOGO_IDC_RADIO2"
+msgid "External:"
+msgstr "Zewnętrzne:"
+
+msgctxt "IDD_PPAGELOGO_IDC_BUTTON2"
+msgid "Browse..."
+msgstr "Przeglądaj..."
+
+msgctxt "IDD_PPAGEOUTPUT_IDC_STATIC"
+msgid "Video Renderer"
+msgstr "Renderer wideo"
+
+msgctxt "IDD_PPAGEOUTPUT_IDC_STATIC"
+msgid "Audio Renderer"
+msgstr "Renderer audio"
+
+msgctxt "IDD_PPAGEOUTPUT_IDC_STATIC"
+msgid "Subtitle Renderer"
+msgstr "Renderer napisów"
+
+msgctxt "IDD_PPAGEWEBSERVER_IDC_CHECK1"
+msgid "Listen on port:"
+msgstr "Nasłuchuj na porcie:"
+
+msgctxt "IDD_PPAGEWEBSERVER_IDC_STATIC1"
+msgid "Launch in web browser..."
+msgstr "Uruchom w przeglądarce internetowej..."
+
+msgctxt "IDD_PPAGEWEBSERVER_IDC_CHECK3"
+msgid "Enable compression"
+msgstr "Włącz kompresję"
+
+msgctxt "IDD_PPAGEWEBSERVER_IDC_CHECK5"
+msgid "Allow access from localhost only"
+msgstr "Zezwalaj na dostęp tylko z localhost"
+
+msgctxt "IDD_PPAGEWEBSERVER_IDC_CHECK6"
+msgid "Enable preview"
+msgstr "Włącz podgląd"
+
+msgctxt "IDD_PPAGEWEBSERVER_IDC_CHECK2"
+msgid "Print debug information"
+msgstr "Wyświetl informacje debugowania"
+
+msgctxt "IDD_PPAGEWEBSERVER_IDC_CHECK4"
+msgid "Serve pages from:"
+msgstr "Udostępniaj strony z:"
+
+msgctxt "IDD_PPAGEWEBSERVER_IDC_BUTTON1"
+msgid "Browse..."
+msgstr "Przeglądaj..."
+
+msgctxt "IDD_PPAGEWEBSERVER_IDC_BUTTON2"
+msgid "Deploy..."
+msgstr "Umieść..."
+
+msgctxt "IDD_PPAGEWEBSERVER_IDC_STATIC"
+msgid "Default page:"
+msgstr "Domyślna strona:"
+
+msgctxt "IDD_PPAGEWEBSERVER_IDC_STATIC"
+msgid "CGI handlers: (.ext1=path1;.ext2=path2;...)"
+msgstr "Obsługa CGI: (.ext1=path1;.ext2=path2;...)"
+
+msgctxt "IDD_SUBTITLEDL_DLG_CAPTION"
+msgid "Download subtitles"
+msgstr "Pobierz napisy"
+
+msgctxt "IDD_SUBTITLEDL_DLG_IDC_CHECK1"
+msgid "Replace currently loaded subtitles"
+msgstr "Zastąp aktualnie wczytane napisy"
+
+msgctxt "IDD_SUBTITLEDL_DLG_IDOK"
+msgid "Download"
+msgstr "Pobierz"
+
+msgctxt "IDD_SUBTITLEDL_DLG_IDC_BUTTON1"
+msgid "Refresh"
+msgstr "Odśwież"
+
+msgctxt "IDD_SUBTITLEDL_DLG_IDC_BUTTON2"
+msgid "Abort"
+msgstr "Przerwij"
+
+msgctxt "IDD_SUBTITLEDL_DLG_IDC_BUTTON3"
+msgid "Options"
+msgstr "Opcje"
+
+msgctxt "IDD_SUBTITLEDL_DLG_IDC_BUTTON4"
+msgid "Search"
+msgstr "Szukaj"
+
+msgctxt "IDD_FILEPROPRES_IDC_BUTTON1"
+msgid "Save As..."
+msgstr "Zapisz jako..."
+
+msgctxt "IDD_PPAGEMISC_IDC_STATIC"
+msgid "Update check"
+msgstr "Sprawdź aktualizacje"
+
+msgctxt "IDD_PPAGEMISC_IDC_CHECK1"
+msgid "Enable automatic update check"
+msgstr "Włącz automatyczne sprawdzanie aktualizacji"
+
+msgctxt "IDD_PPAGEMISC_IDC_STATIC5"
+msgid "Check every:"
+msgstr "Sprawdzaj co:"
+
+msgctxt "IDD_PPAGEMISC_IDC_STATIC6"
+msgid "day(s)"
+msgstr "dzień (dni)"
+
+msgctxt "IDD_PPAGEMISC_IDC_STATIC"
+msgid "Color controls"
+msgstr "Regulacja kolorów"
+
+msgctxt "IDD_PPAGEMISC_IDC_COLOR_CONTROLS"
+msgid "Open"
+msgstr "Otwórz"
+
+msgctxt "IDD_PPAGEMISC_IDC_STATIC"
+msgid "Settings management"
+msgstr "Zarządzanie ustawieniami"
+
+msgctxt "IDD_PPAGEMISC_IDC_RESET_SETTINGS"
+msgid "Reset"
+msgstr "Resetuj"
+
+msgctxt "IDD_PPAGEMISC_IDC_EXPORT_KEYS"
+msgid "Export keys"
+msgstr "Eksportuj klawisze"
+
+msgctxt "IDD_PPAGEMISC_IDC_EXPORT_SETTINGS"
+msgid "Export"
+msgstr "Eksportuj"
+
+msgctxt "IDD_TUNER_SCAN_CAPTION"
+msgid "Tuner scan"
+msgstr "Skanowanie tunera"
+
+msgctxt "IDD_TUNER_SCAN_ID_START"
+msgid "Start"
+msgstr "Rozpocznij"
+
+msgctxt "IDD_TUNER_SCAN_IDCANCEL"
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgctxt "IDD_TUNER_SCAN_IDC_STATIC"
+msgid "Freq. Start"
+msgstr "Częstotliwość początkowa"
+
+msgctxt "IDD_TUNER_SCAN_IDC_STATIC"
+msgid "Bandwidth"
+msgstr "Pasmo:"
+
+msgctxt "IDD_TUNER_SCAN_IDC_STATIC"
+msgid "Freq. End"
+msgstr "Częstotliwość końcowa"
+
+msgctxt "IDD_TUNER_SCAN_IDC_CHECK_IGNORE_ENCRYPTED"
+msgid "Ignore encrypted channels"
+msgstr "Ignoruj kanały kodowane"
+
+msgctxt "IDD_TUNER_SCAN_ID_SAVE"
+msgid "Save"
+msgstr "Zapisz"
+
+msgctxt "IDD_TUNER_SCAN_IDC_STATIC"
+msgid "S"
+msgstr "S"
+
+msgctxt "IDD_TUNER_SCAN_IDC_STATIC"
+msgid "Q"
+msgstr "J"
+
+msgctxt "IDD_TUNER_SCAN_IDC_CHECK_OFFSET"
+msgid "Use an offset"
+msgstr "Przesunięcie"
+
+msgctxt "IDD_TUNER_SCAN_IDC_STATIC"
+msgid "Symbol Rate"
+msgstr "Częstotliwość modulacji"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_STATIC"
+msgid "Default Device"
+msgstr "Urządzenie domyślne"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_RADIO1"
+msgid "Analog"
+msgstr "Analogowe"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_RADIO2"
+msgid "Digital"
+msgstr "Cyfrowe"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_STATIC"
+msgid "Analog settings"
+msgstr "Ustawienia urządzenia analogowe"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_STATIC1"
+msgid "Video"
+msgstr "Wideo"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_STATIC2"
+msgid "Audio"
+msgstr "Audio"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_STATIC3"
+msgid "Country"
+msgstr "Kraj"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_STATIC"
+msgid "Digital settings (BDA)"
+msgstr "Ustawienia urządzenia cyfrowego (BDA)"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_STATIC4"
+msgid "Network Provider"
+msgstr "Dostawca sieci"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_STATIC5"
+msgid "Tuner"
+msgstr "Tuner"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_STATIC6"
+msgid "Receiver"
+msgstr "Odbiornik"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_PPAGECAPTURE_ST10"
+msgid "Channel switching approach:"
+msgstr "Ustawienia przełączania kanałów:"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_PPAGECAPTURE_ST11"
+msgid "Rebuild filter graph"
+msgstr "Przebuduj graf filtrów"
+
+msgctxt "IDD_PPAGECAPTURE_IDC_PPAGECAPTURE_ST12"
+msgid "Stop filter graph"
+msgstr "Zatrzymuj graf filtrów"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC"
+msgid "Common"
+msgstr "Ogólne"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC"
+msgid "Resizer:"
+msgstr "Skalowanie:"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC"
+msgid "Surface:"
+msgstr "Płaszczyzna:"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_EVR_BUFFERS_TXT"
+msgid "EVR Buffers:"
+msgstr "Bufory EVR:"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_RESETDEVICE"
+msgid "Reinitialize when changing display"
+msgstr "Ponownie inicjalizuj przy zmianie wyświetlacza"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_CACHESHADERS"
+msgid "Cache compiled Shaders"
+msgstr "Zachowaj skompilowane shadery"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_FULLSCREEN_MONITOR_CHECK"
+msgid "D3D Fullscreen"
+msgstr "Pełny ekran D3D"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_DSVMR9LOADMIXER"
+msgid "VMR-9 Mixer Mode"
+msgstr "Tryb VMR-9 Mixer"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_D3D9DEVICE"
+msgid "Select D3D9 Render Device"
+msgstr "Wybierz urządzenie renderujące D3D9"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_SYNC_GROUP"
+msgid "Sync Renderer"
+msgstr "Sync Renderer"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_SYNCVIDEO"
+msgid "Sync video to display"
+msgstr "Synchronizuj wideo z wyświetlaczem"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC1"
+msgid "Frequency adjustment:"
+msgstr "Regulacja częstotliwości:"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_SYNCDISPLAY"
+msgid "Sync display to video"
+msgstr "Synchronizuj wyświetlacz z wideo"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC2"
+msgid "Frequency adjustment:"
+msgstr "Regulacja częstotliwości:"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC3"
+msgid "lines"
+msgstr "Linie"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC4"
+msgid "columns"
+msgstr "Kolumny"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_SYNCNEAREST"
+msgid "Present at nearest VSync"
+msgstr "Wyświetlanie przy najbliższej synchronizacji pionowej"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC5"
+msgid "Target sync offset:"
+msgstr "Docelowe przesunięcie synchronizacji:"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC6"
+msgid "ms"
+msgstr "ms"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC7"
+msgid "Control limits:"
+msgstr "Limity sterowania:"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC8"
+msgid "+/-"
+msgstr "+/-"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC9"
+msgid "ms"
+msgstr "ms"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC10"
+msgid "Changes take effect after the playback has been closed and restarted."
+msgstr ""
+"Zmiany zostaną zastosowane po zamknięciu i ponownym uruchomieniu "
+"odtwarzania."
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_STATIC"
+msgid "More renderer settings are available in the Play menu"
+msgstr "Więcej ustawień renderera jest dostępnych w menu Odtwarzanie"
+
+msgctxt "IDD_PPAGEVIDEORENDERER_IDC_RESET"
+msgid "Reset"
+msgstr "Resetuj"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_STATIC"
+msgid "Fullscreen monitor"
+msgstr "Monitor pełnoekranowy"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_CHECK1"
+msgid "Launch files in fullscreen"
+msgstr "Uruchamiaj pliki w trybie pełnoekranowym"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_CHECK7"
+msgid "Allow separate control window"
+msgstr "Zezwalaj na oddzielne okno sterowania"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_CHECK5"
+msgid "Exit fullscreen at the end of playback"
+msgstr "Wyjdź z trybu pełnoekranowego po zakończeniu odtwarzania"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_CHECK4"
+msgid "Hide controls in fullscreen"
+msgstr "Ukrywaj elementy sterujące w trybie pełnoekranowym"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_STATIC1"
+msgid "ms"
+msgstr "ms"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_CHECK6"
+msgid "Hide docked panels"
+msgstr "Ukrywaj zadokowane panele"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_CHECK2"
+msgid "Use autochange fullscreen monitor mode"
+msgstr "Używaj automatycznej zmiany trybu pracy wyświetlacza"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_BUTTON1"
+msgid "Add"
+msgstr "Dodaj"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_BUTTON2"
+msgid "Del"
+msgstr "Usuń"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_BUTTON3"
+msgid "Up"
+msgstr "W górę"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_BUTTON4"
+msgid "Down"
+msgstr "W dół"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_STATIC"
+msgid "Delay"
+msgstr "Opóźnienie"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_STATIC2"
+msgid "s"
+msgstr "s"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_CHECK3"
+msgid "Apply default monitor mode on fullscreen exit"
+msgstr "Zastosuj domyślny tryb monitora po wyjściu z pełnego ekranu"
+
+msgctxt "IDD_PPAGEFULLSCREEN_IDC_RESTORERESCHECK"
+msgid "Restore resolution on program exit"
+msgstr "Przywróć rozdzielczość po wyjściu z programu"
+
+msgctxt "IDD_NAVIGATION_DLG_IDC_NAVIGATION_INFO"
+msgid "Info"
+msgstr "Informacje"
+
+msgctxt "IDD_NAVIGATION_DLG_IDC_NAVIGATION_SCAN"
+msgid "Scan"
+msgstr "Skanuj"
+
+msgctxt "IDD_PPAGESUBMISC_IDC_CHECK1"
+msgid "Prefer forced and/or default subtitles tracks"
+msgstr "Preferuj wymuszone i/lub domyślne ścieżki napisów"
+
+msgctxt "IDD_PPAGESUBMISC_IDC_CHECK2"
+msgid "Prefer external subtitles over embedded subtitles"
+msgstr "Preferuj napisy zewnętrzne zamiast wbudowanych"
+
+msgctxt "IDD_PPAGESUBMISC_IDC_CHECK3"
+msgid "Ignore embedded subtitles"
+msgstr "Ignoruj napisy wbudowane"
+
+msgctxt "IDD_PPAGESUBMISC_IDC_STATIC"
+msgid "Autoload paths"
+msgstr "Automatyczne ładowanie ścieżek"
+
+msgctxt "IDD_PPAGESUBMISC_IDC_BUTTON1"
+msgid "Reset"
+msgstr "Resetuj"
+
+msgctxt "IDD_PPAGESUBMISC_IDC_STATIC"
+msgid "Online subtitle search"
+msgstr "Wyszukiwanie napisów w internecie"
+
+msgctxt "IDD_PPAGESUBMISC_IDC_CHECK4"
+msgid "Automatically search and download subtitles if none are found locally"
+msgstr ""
+"Automatycznie wyszukuj i pobieraj napisy, jeśli nie zostaną znalezione "
+"lokalnie."
+
+msgctxt "IDD_PPAGESUBMISC_IDC_CHECK5"
+msgid ""
+"Prefer subtitles for hearing impaired (when indicated by subtitles provider)"
+msgstr ""
+"Preferuj napisy dla niesłyszących (jeśli są oznaczone przez dostawcę "
+"napisów)"
+
+msgctxt "IDD_PPAGESUBMISC_IDC_STATIC1"
+msgid "Ignore files containing any of the following word(s):"
+msgstr "Ignoruj ​​pliki zawierające następujące słowo(a):"
+
+msgctxt "IDD_PPAGESUBMISC_IDC_STATIC2"
+msgid "Languages in order of preference:"
+msgstr "Języki w kolejności preferencji:"
+
+msgctxt "IDD_PPAGESUBMISC_IDC_CHECK_AUTOSAVE_ONLINE_SUBTITLE"
+msgid ""
+"Automatically save downloaded subtitles to the first autoload path folder"
+msgstr ""
+"Automatycznie zapisuj pobrane napisy w pierwszym folderze automatycznego "
+"wczytywania."
+
+msgctxt "IDD_UPDATE_DIALOG_CAPTION"
+msgid "Update Checker"
+msgstr "Sprawdzanie aktualizacji"
+
+msgctxt "IDD_UPDATE_DIALOG_IDC_UPDATE_DL_BUTTON"
+msgid "&Download now"
+msgstr "&Pobierz teraz"
+
+msgctxt "IDD_UPDATE_DIALOG_IDC_UPDATE_LATER_BUTTON"
+msgid "Remind me &later"
+msgstr "Przypomnij mi &później"
+
+msgctxt "IDD_UPDATE_DIALOG_IDC_UPDATE_IGNORE_BUTTON"
+msgid "&Ignore this update"
+msgstr "&Ignoruj tę aktualizację"
+
+msgctxt "IDD_PPAGESHADERS_IDC_STATIC"
+msgid ""
+"Shaders contain special effects which can be added to the video rendering "
+"process."
+msgstr ""
+"Shadery zawierają efekty specjalne, które można dodać do procesu "
+"renderowania wideo."
+
+msgctxt "IDD_PPAGESHADERS_IDC_BUTTON12"
+msgid "Add shader file"
+msgstr "Dodaj plik shadera"
+
+msgctxt "IDD_PPAGESHADERS_IDC_BUTTON13"
+msgid "Remove"
+msgstr "Usuń"
+
+msgctxt "IDD_PPAGESHADERS_IDC_BUTTON1"
+msgid "Add to pre-resize"
+msgstr "Dodaj przed skalowaniem"
+
+msgctxt "IDD_PPAGESHADERS_IDC_BUTTON2"
+msgid "Add to post-resize"
+msgstr "Dodaj po skalowaniu"
+
+msgctxt "IDD_PPAGESHADERS_IDC_STATIC"
+msgid "Shader presets"
+msgstr "Profile shaderów"
+
+msgctxt "IDD_PPAGESHADERS_IDC_BUTTON3"
+msgid "Load"
+msgstr "Wczytaj"
+
+msgctxt "IDD_PPAGESHADERS_IDC_BUTTON4"
+msgid "Save"
+msgstr "Zapisz"
+
+msgctxt "IDD_PPAGESHADERS_IDC_BUTTON5"
+msgid "Delete"
+msgstr "Usuń"
+
+msgctxt "IDD_PPAGESHADERS_IDC_STATIC"
+msgid "Active pre-resize shaders"
+msgstr "Aktywne shadery przed skalowaniem"
+
+msgctxt "IDD_PPAGESHADERS_IDC_STATIC"
+msgid "Active post-resize shaders"
+msgstr "Aktywne shadery po skalowaniu"
+
+msgctxt "IDD_PPAGESHADERS_IDC_STATIC5"
+msgid ""
+"MPC-VR does not support pre-resize shaders. It will run them after resize, "
+"before the post-resize shaders."
+msgstr ""
+"MPC-VR nie obsługuje shaderów przed skalowaniem. Zostaną one uruchomione po "
+"skalowaniu, przed shaderami po skalowaniu."
+
+msgctxt "IDD_DEBUGSHADERS_DLG_CAPTION"
+msgid "Debug Shaders"
+msgstr "Debuguj shadery"
+
+msgctxt "IDD_DEBUGSHADERS_DLG_IDC_RADIO1"
+msgid "PS 2.0"
+msgstr "PS 2.0"
+
+msgctxt "IDD_DEBUGSHADERS_DLG_IDC_RADIO2"
+msgid "PS 2.0b"
+msgstr "PS 2.0b"
+
+msgctxt "IDD_DEBUGSHADERS_DLG_IDC_RADIO3"
+msgid "PS 2.0a"
+msgstr "PS 2.0a"
+
+msgctxt "IDD_DEBUGSHADERS_DLG_IDC_RADIO4"
+msgid "PS 3.0"
+msgstr "PS 3.0"
+
+msgctxt "IDD_DEBUGSHADERS_DLG_IDC_STATIC1"
+msgid "Debug Information"
+msgstr "Informacje debugowania"
+
+msgctxt "IDD_PPAGEADVANCED_IDC_STATIC"
+msgid "Advanced Settings, do not edit unless you know what you are doing."
+msgstr "Zaawansowane ustawienia - nie zmieniaj, jeśli nie wiesz, co robisz."
+
+msgctxt "IDD_PPAGEADVANCED_IDC_RADIO1"
+msgid "True"
+msgstr "Tak"
+
+msgctxt "IDD_PPAGEADVANCED_IDC_RADIO2"
+msgid "False"
+msgstr "Nie"
+
+msgctxt "IDD_PPAGEADVANCED_IDC_BUTTON1"
+msgid "Default"
+msgstr "Domyślne"
+
+msgctxt "IDD_PPAGEAUDIORENDERER_IDC_STATIC5"
+msgid "Device"
+msgstr "Urządzenie"
+
+msgctxt "IDD_PPAGEAUDIORENDERER_IDC_STATIC6"
+msgid "Options"
+msgstr "Ustawienia"
+
+msgctxt "IDD_PPAGEAUDIORENDERER_IDC_CHECK1"
+msgid "Exclusive mode"
+msgstr "Tryb ekskluzywny"
+
+msgctxt "IDD_PPAGEAUDIORENDERER_IDC_CHECK4"
+msgid "Ignore system channel mixer (always ignored in exclusive WASAPI mode)"
+msgstr ""
+"Ignoruj systemowy mikser kanałów (zawsze ignorowany w trybie wyłącznego "
+"dostępu WASAPI)"
+
+msgctxt "IDD_PPAGEAUDIORENDERER_IDC_CHECK3"
+msgid "Enable stereo crossfeed (for headphones)"
+msgstr "Włącz przesłuch stereo (dla słuchawek)"
+
+msgctxt "IDD_PPAGEAUDIORENDERER_IDC_BUTTON1"
+msgid "C. Moy"
+msgstr "C. Moy"
+
+msgctxt "IDD_PPAGEAUDIORENDERER_IDC_BUTTON2"
+msgid "J. Meier"
+msgstr "J. Meier"
+
+msgctxt "IDD_PPAGEAUDIORENDERER_IDC_STATIC1"
+msgid "Cut-off:"
+msgstr "Odcięcie:"
+
+msgctxt "IDD_PPAGEAUDIORENDERER_IDC_STATIC3"
+msgid "Level:"
+msgstr "Poziom:"
+
+msgctxt "IDD_PPAGEAUDIORENDERER_IDC_STATIC7"
+msgid "Note"
+msgstr "Uwaga"
+
+msgctxt "IDD_PPAGEAUDIORENDERER_IDC_STATIC8"
+msgid ""
+"To minimize audio distortion, it is recommended to keep player volume at "
+"around 85% when playing loud lossy-encoded content."
+msgstr ""
+"Aby zminimalizować zniekształcenia dźwięku, zaleca się utrzymywanie "
+"głośności odtwarzacza na poziomie około 85% podczas odtwarzania głośnych "
+"materiałów skompresowanych stratnie."
+
+msgctxt "IDD_CMD_LINE_HELP_CAPTION"
+msgid "Command line help"
+msgstr "Pomoc wiersza poleceń"
+
+msgctxt "IDD_CMD_LINE_HELP_IDOK"
+msgid "OK"
+msgstr "OK"
+
+msgctxt "IDD_CRASH_REPORTER_CAPTION"
+msgid "Crash reporter"
+msgstr "Zgłaszanie usterek"
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC"
+msgid "We are sorry, it seems MPC-HC just crashed. :("
+msgstr "Przepraszamy, wygląda na to, że MPC-HC uległ awarii. :("
+
+msgctxt "IDD_CRASH_REPORTER_IDC_CHECK1"
+msgid "Send a bug report to help us diagnose and fix the problem."
+msgstr ""
+"Wyślij raport o błędzie, aby pomóc nam zdiagnozować i naprawić problem."
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC1"
+msgid "Optional information"
+msgstr "Dodatkowe informacje"
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC2"
+msgid "Email:"
+msgstr "E-mail:"
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC3"
+msgid ""
+"Your email address is optional and will only be used if the developers need "
+"to contact you for more information."
+msgstr ""
+"Twój adres e-mail jest opcjonalny i zostanie użyty tylko wtedy, gdy twórcy "
+"będą potrzebowali skontaktować się z Tobą w celu uzyskania dodatkowych "
+"informacji."
+
+msgctxt "IDD_CRASH_REPORTER_IDC_STATIC4"
+msgid "Problem description (use English only):"
+msgstr "Opis problemu (w języku angielskim):"
+
+msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON1"
+msgid "Restart MPC-HC"
+msgstr "Zrestartuj MPC-HC"
+
+msgctxt "IDD_CRASH_REPORTER_IDC_BUTTON2"
+msgid "Quit MPC-HC"
+msgstr "Zamknij MPC-HC"
+
+msgctxt "IDD_PPAGEDPICALC_IDC_STATIC1"
+msgid "Groupbox"
+msgstr "Grupa"
+
+msgctxt "IDD_PPAGEDPICALC_IDC_STATIC2"
+msgid "Autoplay"
+msgstr "Autoodtwarzanie"
+
+msgctxt "IDD_ADDCOMMAND_DLG_CAPTION"
+msgid "Select command"
+msgstr "Wybierz polecenie"
+
+msgctxt "IDD_ADDCOMMAND_DLG_IDC_STATIC"
+msgid "Filter:"
+msgstr "Filtry:"
+
+msgctxt "IDD_ADDCOMMAND_DLG_IDOK"
+msgid "OK"
+msgstr "Ok"
+
+msgctxt "IDD_ADDCOMMAND_DLG_IDCANCEL"
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgctxt "IDD_HISTORY_CAPTION"
+msgid "History"
+msgstr "Historia"
+
+msgctxt "IDD_HISTORY_IDC_BUTTON1"
+msgid "Menu"
+msgstr "Menu"
+
+msgctxt "IDD_HISTORY_IDC_BUTTON2"
+msgid "Remove selected"
+msgstr "Resetuj zaznaczone"
+
+msgctxt "IDD_COLORCONTROLS_DLG_CAPTION"
+msgid "Color controls"
+msgstr "Regulacja kolorów"
+
+msgctxt "IDD_COLORCONTROLS_DLG_IDC_STATIC5"
+msgid "Brightness"
+msgstr "Jasność"
+
+msgctxt "IDD_COLORCONTROLS_DLG_IDC_STATIC6"
+msgid "Contrast"
+msgstr "Kontrast"
+
+msgctxt "IDD_COLORCONTROLS_DLG_IDC_STATIC7"
+msgid "Hue"
+msgstr "Odcień"
+
+msgctxt "IDD_COLORCONTROLS_DLG_IDC_STATIC8"
+msgid "Saturation"
+msgstr "Nasycenie"
+
+msgctxt "IDD_COLORCONTROLS_DLG_IDC_RESET"
+msgid "Reset"
+msgstr "Resetuj"
+
+msgctxt "IDD_COLORCONTROLS_DLG_IDCANCEL"
+msgid "Close"
+msgstr "Zamknij"
+
+msgctxt "IDD_REDIRECT_WAIT_DLG_CAPTION"
+msgid "MPC-HC"
+msgstr "MPC-HC"
+
+msgctxt "IDD_REDIRECT_WAIT_DLG_IDC_STATIC"
+msgid ""
+"Opening files is taking some time. Waiting for the first MPC-HC instance to "
+"respond."
+msgstr ""
+"Otwieranie plików trwa dłużej. Oczekiwanie na odpowiedź pierwszej instancji "
+"MPC-HC."
+
+msgctxt "IDD_REDIRECT_WAIT_DLG_IDC_STATIC"
+msgid "Please wait and do not open more files for the next 30 seconds."
+msgstr "Proszę czekać i nie otwierać więcej plików przez następne 30 sekund."
+
+msgctxt "IDD_REDIRECT_WAIT_DLG_IDCANCEL"
+msgid "Open new window"
+msgstr "Otwórz nowe okno"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC1"
+msgid "Theme"
+msgstr "Motyw"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK1"
+msgid "Use Modern Theme"
+msgstr "Użyj nowoczesnego motywu"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC2"
+msgid "Modern Theme Color:"
+msgstr "Kolor motywu:"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC4"
+msgid "Seekbar"
+msgstr "Pasek przewijania"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC22"
+msgid "Modern Seekbar height:"
+msgstr "Wysokość paska przewijania:"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK2"
+msgid "Show chapter marks on seekbar"
+msgstr "Pokaż znaczniki rozdziałów"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC"
+msgid "Time on seekbar:"
+msgstr "Czas na pasku:"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC8"
+msgid "Seekbar Hover"
+msgstr "Pasek wyszukiwania"
+
+msgctxt "IDD_PPAGETHEME_IDC_SEEK_PREVIEW"
+msgid "Show video preview"
+msgstr "Pokaż podgląd wideo"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK14"
+msgid "Show time"
+msgstr "Pokaż czas"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC11"
+msgid "Hover Position:"
+msgstr "Podgląd pozycji:"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC7"
+msgid "Preview width (% of screen)"
+msgstr "Szerokość podglądu (% ekranu)"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC10"
+msgid "Status Bar Elements"
+msgstr "Elementy paska stanu"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK3"
+msgid "Track Language"
+msgstr "Ścieżka językowa"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK4"
+msgid "Video Info"
+msgstr "Informacje o obrazie"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK12"
+msgid "Audio Info"
+msgstr "Informacje o dźwięku"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK5"
+msgid "FPS"
+msgstr "Klatki na sekundę"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK6"
+msgid "A-B Marks"
+msgstr "Znaczniki powtarzania A-B"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC21"
+msgid "Language"
+msgstr "Język"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC5"
+msgid "Language:"
+msgstr "Język:"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC9"
+msgid "On Screen Display (OSD)"
+msgstr "Wyświetlanie na ekranie (OSD)"
+
+msgctxt "IDD_PPAGETHEME_IDC_SHOW_OSD"
+msgid "Show OSD (requires restart)"
+msgstr "Pokaż OSD (wymaga restartu)"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC6"
+msgid "Font:"
+msgstr "Czcionka:"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC23"
+msgid "Font size:"
+msgstr "Rozmiar czcionki:"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK13"
+msgid "Display Current Time"
+msgstr "Wyświetl aktualny czas"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC"
+msgid "Window Behavior"
+msgstr "Zachowanie okna"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK7"
+msgid "Limit window proportions on resize"
+msgstr "Zachowaj proporcje okna przy zmianie rozmiaru"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK9"
+msgid "Snap to desktop edges"
+msgstr "Przyciągaj do krawędzi pulpitu"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK10"
+msgid "Hide Windowed Controls"
+msgstr "Ukrywaj elementy sterujące w trybie okna"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC"
+msgid "Windows Integration"
+msgstr "Integracja z Windows"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK_ENHANCED_TASKBAR"
+msgid "Use enhanced taskbar features"
+msgstr "Użyj zaawansowanych funkcji paska zadań"
+
+msgctxt "IDD_PPAGETHEME_IDC_CHECK11"
+msgid "Control via Windows UI (SMTC)"
+msgstr "Steruj przez Windows UI (SMTC)"
+
+msgctxt "IDD_PPAGETHEME_IDC_STATIC"
+msgid "Custom Preset (4)"
+msgstr "Niestandardowe ustawienie (4)"
+
+msgctxt "IDD_PPAGETHEME_IDC_CUSTOMPRESET_MENU"
+msgid "Menu"
+msgstr "Menu"
+
+msgctxt "IDD_PPAGETHEME_IDC_CUSTOMPRESET_STATUSBAR"
+msgid "Status"
+msgstr "Status"
+
+msgctxt "IDD_PPAGETHEME_IDC_CUSTOMPRESET_SEEKBAR"
+msgid "Seek Bar"
+msgstr "Pasek przewijania"
+
+msgctxt "IDD_PPAGETHEME_IDC_CUSTOMPRESET_INFO"
+msgid "Information"
+msgstr "Informacje"
+
+msgctxt "IDD_PPAGETHEME_IDC_CUSTOMPRESET_TOOLBAR"
+msgid "Controls"
+msgstr "Przyciski"
+
+msgctxt "IDD_PPAGETHEME_IDC_CUSTOMPRESET_STATS"
+msgid "Statistics"
+msgstr "Statystyki"
+
+msgctxt "IDD_RAR_ENTRY_SELECTOR_CAPTION"
+msgid "Select Media from RAR"
+msgstr "Wybierz multimedia z RAR"
+
+msgctxt "IDD_RAR_ENTRY_SELECTOR_IDOK"
+msgid "Select"
+msgstr "Zaznacz"
+
+msgctxt "IDD_RAR_ENTRY_SELECTOR_IDCANCEL"
+msgid "Cancel"
+msgstr "Anuluj"
+
+msgctxt "IDD_PPAGETOOLBAR_IDC_STATIC"
+msgid "Toolbar Style"
+msgstr "Styl paska narzędzi"
+
+msgctxt "IDD_PPAGETOOLBAR_IDC_STATIC3"
+msgid "Toolbar Scale:"
+msgstr "Skalowanie paska narzędzi:"
+
+msgctxt "IDD_PPAGETOOLBAR_IDC_STATIC"
+msgid "Toolbar Alignment:"
+msgstr "Wyrównanie paska:"
+
+msgctxt "IDD_PPAGETOOLBAR_IDC_STATIC"
+msgid "Active Style:"
+msgstr "Aktywny styl:"
+
+msgctxt "IDD_PPAGETOOLBAR_IDC_STATIC"
+msgid "Custom Button 1"
+msgstr "Niestandardowy przycisk 1"
+
+msgctxt "IDD_PPAGETOOLBAR_IDC_STATIC"
+msgid "Click"
+msgstr "Klik"
+
+msgctxt "IDD_PPAGETOOLBAR_IDC_STATIC"
+msgid "Right click"
+msgstr "Prawy klik"
+
+msgctxt "IDD_PPAGETOOLBAR_IDC_STATIC"
+msgid "Custom Button 2"
+msgstr "Niestandardowy przycisk 2"
+
+msgctxt "IDD_PPAGETOOLBAR_IDC_STATIC"
+msgid "Custom Button 3"
+msgstr "Niestandardowy przycisk 3"
+
+msgctxt "IDD_PPAGETOOLBAR_IDC_STATIC"
+msgid "Custom Button 4"
+msgstr "Niestandardowy przycisk 4"
+
+msgctxt "IDD_PPAGETOOLBARLAYOUT_IDC_BUTTON3"
+msgid "<<"
+msgstr "<<"
+
+msgctxt "IDD_PPAGETOOLBARLAYOUT_IDC_BUTTON4"
+msgid ">>"
+msgstr ">>"
+
+msgctxt "IDD_PPAGETOOLBARLAYOUT_IDC_BUTTON5"
+msgid "^"
+msgstr "^"
+
+msgctxt "IDD_PPAGETOOLBARLAYOUT_IDC_BUTTON6"
+msgid "v"
+msgstr "v"
+
+msgctxt "IDD_PPAGETOOLBARLAYOUT_IDC_BUTTON1"
+msgid "Default"
+msgstr "Domyślne"
