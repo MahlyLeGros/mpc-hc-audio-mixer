@@ -12,9 +12,21 @@ public:
     void SetLevel(float peak);
 };
 
+class CAudioTrackMute : public CButton {
+    bool m_muted = false;
+    CImage m_nativeIcons;
+    int m_iconSize = 0;
+    void DrawItem(LPDRAWITEMSTRUCT item) override;
+public:
+    void SetMuted(bool muted) {
+        if (m_muted != muted) { m_muted = muted; Invalidate(FALSE); }
+    }
+};
+
 class CAudioMixerDlg : public CDialog {
     struct Row {
         CStatic name;
+        CAudioTrackMute mute;
         CAudioTrackMeter meter;
         CVolumeCtrl volume{true, true};
     };

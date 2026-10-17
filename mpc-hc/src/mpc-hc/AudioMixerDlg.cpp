@@ -2,7 +2,48 @@
 #include "stdafx.h"
 #include "AudioMixerDlg.h"
 #include <uxtheme.h>
+#include "SVGImage.h"
+#include "CMPCTheme.h"
+#include "mplayerc.h"
 #pragma comment(lib, "uxtheme.lib")
+
+// Rasterize MPC-HC's native small-size SVG artwork at the final pixel size.
+// Never resize the bitmap already rendered for the main toolbar.
+void CAudioTrackMute::DrawItem(LPDRAWITEMSTRUCT item) {
+    CDC dc; dc.Attach(item->hDC);
+    CRect bounds(item->rcItem);
+    dc.FillSolidRect(bounds, RGB(32,34,38));
+    const int size = std::min(bounds.Width(), bounds.Height());
+    if (size > 0 && size != m_iconSize) {
+        m_nativeIcons.Destroy();
+        const UINT resource = size < 24 ? IDF_SVG_BUTTONS16 : size < 32 ? IDF_SVG_BUTTONS24 :
+                              size < 48 ? IDF_SVG_BUTTONS32 : size < 64 ? IDF_SVG_BUTTONS48 : IDF_SVG_BUTTONS64;
+        const int base = size < 24 ? 16 : size < 32 ? 24 : size < 48 ? 32 : size < 64 ? 48 : 64;
+        m_iconSize = SUCCEEDED(SVGImage::Load(resource, m_nativeIcons, float(size)/base)) ? size : 0;
+        // NanoSVG returns straight alpha; GDI AlphaBlend requires premultiplied RGB.
+        if (m_iconSize) {
+            m_nativeIcons.SetHasAlphaChannel(true);
+            for (int y=0; y<m_nativeIcons.GetHeight(); ++y) {
+                auto* pixels = static_cast<RGBQUAD*>(m_nativeIcons.GetPixelAddress(0,y));
+                for (int x=0; x<m_nativeIcons.GetWidth(); ++x) {
+                    auto& pixel = pixels[x];
+                    pixel.rgbRed = BYTE((int(pixel.rgbRed)*pixel.rgbReserved+127)/255);
+                    pixel.rgbGreen = BYTE((int(pixel.rgbGreen)*pixel.rgbReserved+127)/255);
+                    pixel.rgbBlue = BYTE((int(pixel.rgbBlue)*pixel.rgbReserved+127)/255);
+                }
+            }
+        }
+    }
+    if (!m_nativeIcons.IsNull()) {
+        // The mixer has a dark background, so use the native dark-theme row.
+        const int row = IsWindowEnabled() ? 2 : 3;
+        m_nativeIcons.AlphaBlend(item->hDC,
+            bounds.left+(bounds.Width()-size)/2, bounds.top+(bounds.Height()-size)/2,
+            size, size, (24+(m_muted ? 1 : 0))*size, row*size, size, size);
+    }
+    if (item->itemState & ODS_FOCUS) dc.DrawFocusRect(bounds);
+    dc.Detach();
+}
 
 // Segmented, logarithmic level display: green, yellow, then red near clipping.
 void CAudioTrackMeter::SetLevel(float peak) {
@@ -109,6 +150,7 @@ BOOL CAudioMixerDlg::OnInitDialog() {
             auto r = std::make_unique<Row>();
             r->name.Create(L"", child, Rect(0, 0, 1, 1), this);
             r->meter.Create(L"Niveau audio", child | SS_OWNERDRAW, Rect(0,0,1,1), this, UINT(5101+i*4));
+            r->mute.Create(L"Activer/couper le son de la piste", child | WS_TABSTOP | BS_OWNERDRAW, Rect(0,0,1,1), this, UINT(5102+i*4));
             r->volume.Create(this, UINT(5100 + i * 4));
             r->volume.ModifyStyle(0, WS_TABSTOP);
             m_rows.push_back(std::move(r));
@@ -135,10 +177,11 @@ void CAudioMixerDlg::LayoutRows() {
     for (int i=0; i<int(m_rows.size()); ++i) {
         auto& r = *m_rows[i];
         const bool visible = i>=m_first && i<m_first+m_visibleRows;
-        for (CWnd* w : std::initializer_list<CWnd*>{&r.name,&r.meter,&r.volume}) w->ShowWindow(visible ? SW_SHOW : SW_HIDE);
+        for (CWnd* w : std::initializer_list<CWnd*>{&r.name,&r.mute,&r.meter,&r.volume}) w->ShowWindow(visible ? SW_SHOW : SW_HIDE);
         if (!visible) continue;
         const int y = 6+(i-m_first)*22;
-        r.name.MoveWindow(pad,Rect(0,y,1,1).top,labelWidth-pad,Rect(0,0,1,12).Height());
+        r.name.MoveWindow(pad,Rect(0,y,1,1).top,labelWidth-pad-Rect(0,0,18,1).Width(),Rect(0,0,1,12).Height());
+        r.mute.MoveWindow(pad+labelWidth-Rect(0,0,20,1).Width(),Rect(0,y-1,1,1).top,Rect(0,0,16,1).Width(),Rect(0,0,1,14).Height());
         r.meter.MoveWindow(pad+labelWidth,Rect(0,y+3,1,1).top,meterWidth,Rect(0,0,1,6).Height());
         r.volume.MoveWindow(sliderLeft,Rect(0,y,1,1).top,std::max(30,client.Width()-sliderLeft-pad),Rect(0,0,1,12).Height());
     }
@@ -160,12 +203,27 @@ void CAudioMixerDlg::Refresh() {
         if (!t.language.empty() && t.language != L"und") label += L" [" + CString(t.language.c_str()) + L"]";
         if (!t.error.empty()) label += L" - " + CString(t.error.c_str());
         r.name.SetWindowText(label);
+        r.mute.SetMuted(t.mute);
+        r.mute.SetWindowText(t.mute ? L"R�tablir le son de la piste" : L"Couper le son de la piste");
+        r.mute.EnableWindow(usable && m_session->enabled && t.error.empty());
         r.volume.SetPos(int(std::lround(t.volume * 100)));
         r.volume.EnableWindow(usable && m_session->enabled && t.error.empty());
         r.meter.SetLevel(usable && m_session->enabled && t.error.empty() ? levels[i] : 0.0f);
     }
 }
 BOOL CAudioMixerDlg::OnCommand(WPARAM wParam, LPARAM lParam) {
+    if (HIWORD(wParam) == BN_CLICKED) {
+        for (size_t i=0; i<m_rows.size(); ++i) {
+            if (reinterpret_cast<HWND>(lParam) != m_rows[i]->mute.GetSafeHwnd()) continue;
+            {
+                std::lock_guard<std::mutex> lock(m_session->mutex);
+                auto& track = m_session->tracks[i];
+                if (!m_busy && m_session->active && m_session->enabled && track.error.empty()) track.mute = !track.mute;
+            }
+            Refresh();
+            return TRUE;
+        }
+    }
     return CDialog::OnCommand(wParam, lParam);
 }
 void CAudioMixerDlg::OnHScroll(UINT code, UINT pos, CScrollBar* bar) {
@@ -192,7 +250,7 @@ void CAudioMixerDlg::OnVScroll(UINT code, UINT pos, CScrollBar* bar) {
     CDialog::OnVScroll(code, pos, bar);
 }
 BOOL CAudioMixerDlg::HandleWheel(short delta, CPoint point) {
-    CSliderCtrl* target = nullptr;
+    CVolumeCtrl* target = nullptr;
     auto hit = [&](CSliderCtrl& slider) {
         CRect bounds; slider.GetWindowRect(bounds);
         return (slider.GetStyle() & WS_VISIBLE) && bounds.PtInRect(point);

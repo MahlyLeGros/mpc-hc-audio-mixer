@@ -83,6 +83,15 @@ bool CVolumeCtrl::Create(CWnd* pParentWnd, UINT id)
     return true;
 }
 
+void CVolumeCtrl::SetPos(int pos)
+{
+    const int previous = GetPos();
+    CSliderCtrl::SetPos(pos);
+    // Native trackbars invalidate only the old/new thumb. Our fill and percentage
+    // span the entire channel, so every changed value must repaint the full control.
+    if (GetPos() != previous && m_fSelfDrawn && AppIsThemeLoaded() && modernStyle) Invalidate(FALSE);
+}
+
 void CVolumeCtrl::SetPosInternal(int pos)
 {
     SetPos(pos);

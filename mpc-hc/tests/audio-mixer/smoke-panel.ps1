@@ -19,6 +19,7 @@ public static class MixerWindows {
     [DllImport("user32.dll")] public static extern bool EnumWindows(EnumProc proc, IntPtr data);
     [DllImport("user32.dll")] public static extern IntPtr GetWindow(IntPtr window, uint command);
     [DllImport("user32.dll")] public static extern bool EnumChildWindows(IntPtr window, EnumProc proc, IntPtr data);
+    [DllImport("user32.dll", CharSet=CharSet.Unicode)] public static extern int GetWindowText(IntPtr window, System.Text.StringBuilder text, int count);
     [DllImport("user32.dll")] public static extern int GetDlgCtrlID(IntPtr window);
     [DllImport("user32.dll")] public static extern IntPtr GetParent(IntPtr window);
     [DllImport("user32.dll")] public static extern int GetWindowLong(IntPtr window, int index);
@@ -101,9 +102,24 @@ try {
     $deadline = [DateTime]::UtcNow.AddSeconds(15)
     do { Start-Sleep -Milliseconds 250; $slider = [MixerWindows]::Child($dialog,5100) } while (-not [MixerWindows]::IsWindowEnabled($slider) -and [DateTime]::UtcNow -lt $deadline)
     Assert ([MixerWindows]::IsWindowEnabled($slider)) 'Mixing did not activate after graph reload'
-    foreach ($id in @(5001,5002,5003,5004,5005,5102,5103)) {
+    foreach ($id in @(5001,5002,5003,5004,5005,5103)) {
         Assert ([MixerWindows]::Child($dialog,$id) -eq [IntPtr]::Zero) 'Removed control is still present'
     }
+    $mute = [MixerWindows]::Child($dialog,5102)
+    Assert ($mute -ne [IntPtr]::Zero) 'Per-track mute button missing'
+    Assert ([MixerWindows]::IsWindowEnabled($mute)) 'Per-track mute disabled'
+    $muteText = New-Object Text.StringBuilder 128
+    $trackBefore = Msg $slider 0x400
+    [void](Msg $mute 0xf5)
+    Start-Sleep -Milliseconds 100
+    [void][MixerWindows]::GetWindowText($mute,$muteText,128)
+    Assert ($muteText.ToString() -like 'R*') 'Mute state did not toggle'
+    Assert ((Msg $slider 0x400) -eq $trackBefore) 'Mute changed saved track volume'
+    [void](Msg $mute 0xf5)
+    Start-Sleep -Milliseconds 100
+    [void][MixerWindows]::GetWindowText($mute,$muteText,128)
+    Assert ($muteText.ToString() -like 'Couper*') 'Unmute state did not toggle back'
+    Assert ((Msg $slider 0x400) -eq $trackBefore) 'Unmute changed saved track volume'
     [void](Msg $slider 0x405 1 37)
     [void][MixerWindows]::PostMessage($dialog, 0x114, [IntPtr]5, $slider)
     Start-Sleep -Milliseconds 200

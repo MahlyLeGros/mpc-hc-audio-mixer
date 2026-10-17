@@ -39,6 +39,7 @@ public:
     bool Create(CWnd* pParentWnd, UINT id = 0);
     void IncreaseVolume(), DecreaseVolume();
     void SetPosInternal(int pos);
+    void SetPos(int pos);
 
 protected:
     afx_msg BOOL OnSetCursor(CWnd* pWnd, UINT nHitTest, UINT message);

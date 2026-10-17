@@ -8,8 +8,8 @@
 [Setup]
 AppId={{C5CC4C3F-45E4-49D5-81D0-512D33C18C52}
 AppName=MPC-HC Audio Mixer
-AppVersion=0.2.0
-AppVerName=MPC-HC Audio Mixer 0.2.0
+AppVersion=0.2.1
+AppVerName=MPC-HC Audio Mixer 0.2.1
 AppPublisher=MPC-HC Audio Mixer - version personnalisée
 AppPublisherURL=https://github.com/clsid2/mpc-hc
 DefaultDirName={localappdata}\Programs\MPC-HC Audio Mixer

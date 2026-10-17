@@ -19,6 +19,7 @@ puis **Définir par défaut**, ou choisir les formats vidéo souhaités.
 
 - Ouvrir une vidéo MKV, MP4, MOV, AVI ou WebM contenant plusieurs pistes audio.
 - Cliquer sur l’icône à trois curseurs, près du volume en bas à droite.
+- Couper ou rétablir chaque piste avec son bouton haut-parleur ; son volume est conservé.
 - Régler chaque piste indépendamment ; le volume natif reste le volume général.
 - Les niveaux horizontaux affichent le signal source, même si la piste est à 0 %.
 - Le panneau affiche quatre pistes à la fois : utiliser la molette hors des

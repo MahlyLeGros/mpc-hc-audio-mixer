@@ -109,3 +109,7 @@ Cette compilation expérimentale n'est pas une version officielle du projet
 MPC-HC. Les sources modifiées accompagnent le dossier de développement.
 Les mises à jour automatiques sont désactivées dans le paquet portable pour
 éviter de remplacer cette variante par la version officielle sans mélangeur.
+
+## Version 0.2.1
+
+Bouton mute/unmute par piste entre le nom et le vumètre, utilisant les ressources SVG natives MPC-HC rendues à la taille exacte du bouton. Le niveau de volume est conservé pendant le mute. Correction des traces sur les barres de volume après utilisation de la molette par rafraîchissement complet du contrôle.
