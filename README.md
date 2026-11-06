@@ -24,11 +24,24 @@ puis **Définir par défaut**, ou choisir les formats vidéo souhaités.
 - Les niveaux horizontaux affichent le signal source, même si la piste est à 0 %.
 - Le panneau affiche quatre pistes à la fois : utiliser la molette hors des
   curseurs ou la barre de défilement pour accéder aux autres.
-- Le mixage reste actif quand on ferme le panneau. Les réglages se réinitialisent
-  au changement de fichier.
+- Le mixage reste actif quand on ferme le panneau. Les volumes, états Muet et icônes sont mémorisés par numéro de piste.
 
-Première ouverture : la piste sélectionnée reste à 100 %, les autres à 0 %.
+Un bouton entre le nom et le haut-parleur permet de choisir parmi 12 pictogrammes.
+Après la première activation réussie du mélangeur, les vidéos compatibles à plusieurs
+pistes reprennent automatiquement le mixage enregistré, même après redémarrage.
+Une piste supplémentaire sans réglage enregistré commence à 0 %.
+
+Première ouverture sans réglages enregistrés : la piste sélectionnée reste à 100 %, les autres à 0 %.
 Les niveaux sont horodatés selon la lecture ; ils ne suivent pas l’avance du décodeur.
+
+La barre de lecture recherche la position choisie sans s’aligner sur une image clé.
+Maintenir Maj pendant un clic ou un déplacement permet la recherche rapide par
+image clé si l’option de recherche rapide est activée.
+Pour un réglage fin, maintenir Ctrl avant de cliquer et glisser sur la barre :
+le déplacement part de la position actuelle, avec au maximum 10 ms par pixel.
+Les millisecondes sont affichées dans l’infobulle et pendant le déplacement.
+Pour les garder dans le compteur, faire un clic droit sur celui-ci et activer
+**Haute précision**.
 
 ## Sources et compilation
 
@@ -47,10 +60,18 @@ La base exacte et les révisions des dépendances figurent dans
 
 Le mixage simultané concerne les pistes internes des MKV/MP4/MOV/AVI/WebM locaux,
 avec une sortie stéréo à vitesse normale. Les autres formats utilisent
-la lecture habituelle. Aucun export du mixage ni réglage mémorisé entre fichiers.
+la lecture habituelle. Aucun export du mixage. Les réglages mémorisés suivent le numéro des pistes audio.
 
 ## Licence
 
 MPC-HC et les modifications sont distribués sous **GPL-3.0-or-later** :
 [licence](LICENSE). Les dépendances conservent leurs licences et auteurs
  dans leurs dossiers. Les sources complètes sont aussi proposées dans Releases.
+
+## Renommer les pistes (0.2.4)
+
+Cliquer directement sur le nom dans le mélangeur pour le modifier. Entrée termine
+la saisie ; Échap annule les changements depuis le début de la saisie.
+Un champ vide rétablit le nom fourni par la vidéo. Le nom personnalisé, limité à
+64 caractères, est mémorisé par numéro de piste, comme son volume et son icône.
+Le fichier vidéo n’est pas modifié.

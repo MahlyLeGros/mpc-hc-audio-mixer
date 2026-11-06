@@ -51,6 +51,9 @@ private:
     CPoint m_hoverPoint;
     HCURSOR m_cursor;
     bool m_bDraggingThumb, m_bHoverThumb;
+    bool m_bFineSeeking = false;
+    CPoint m_fineSeekAnchor;
+    REFERENCE_TIME m_rtFineSeekAnchor = 0;
     ULONGLONG m_lastDragSeekTickCount;
     bool pauseAfterFirstScroll = false;
     bool pausedForScrolling = false;

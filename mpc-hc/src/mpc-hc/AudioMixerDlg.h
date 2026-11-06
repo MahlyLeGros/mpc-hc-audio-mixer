@@ -23,9 +23,20 @@ public:
     }
 };
 
+class CAudioTrackIcon : public CButton {
+    CImage m_image;
+    int m_index = -1, m_size = 0;
+    void DrawItem(LPDRAWITEMSTRUCT item) override;
+public:
+    void SetIconIndex(int index) { if (m_index!=index) { m_index=index; m_size=0; Invalidate(FALSE); } }
+};
 class CAudioMixerDlg : public CDialog {
     struct Row {
-        CStatic name;
+        CEdit name;
+        bool updatingName = false;
+        std::wstring nameBeforeEdit;
+        CAudioTrackIcon icon;
+        int iconIndex = -1;
         CAudioTrackMute mute;
         CAudioTrackMeter meter;
         CVolumeCtrl volume{true, true};
@@ -40,6 +51,9 @@ class CAudioMixerDlg : public CDialog {
     int m_visibleRows = 2;
     std::function<void()> m_hide;
     int m_first = 0;
+    CToolTipCtrl m_iconTips;
+    bool m_iconMenuOpen = false;
+    size_t m_iconMenuRow = 0;
     bool m_busy = false;
     bool m_attached = false;
     CWnd* m_anchor = nullptr;
@@ -48,6 +62,7 @@ class CAudioMixerDlg : public CDialog {
     void Refresh();
 protected:
     BOOL OnInitDialog() override;
+    BOOL PreTranslateMessage(MSG* message) override;
     BOOL OnCommand(WPARAM wParam, LPARAM lParam) override;
     void OnCancel() override { if (m_hide) m_hide(); }
     void OnOK() override { OnCancel(); }

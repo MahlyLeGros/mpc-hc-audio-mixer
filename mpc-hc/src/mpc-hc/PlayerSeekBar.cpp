@@ -21,6 +21,7 @@
 
 #include "stdafx.h"
 #include "PlayerSeekBar.h"
+#include "SeekBarPrecision.h"
 #include "MainFrm.h"
 #include "mplayerc.h"
 #include "CMPCTheme.h"
@@ -152,10 +153,15 @@ void CPlayerSeekBar::MoveThumb(const CPoint& point)
 {
     if (m_bHasDuration) {
         REFERENCE_TIME rtPosDraw = PositionFromClientPoint(point);
+        if (m_bFineSeeking) {
+            rtPosDraw = FineSeekPosition(m_rtStart, m_rtStop, m_rtFineSeekAnchor,
+                                        point.x - m_fineSeekAnchor.x, GetChannelRect().Width());
+        }
         REFERENCE_TIME rtPos = rtPosDraw;
         const CAppSettings& s = AfxGetAppSettings();
         REFERENCE_TIME duration = m_rtStop - m_rtStart;
-        if (duration >= 600000000LL && s.bFastSeek && (GetKeyState(VK_SHIFT) >= 0)) {
+        // Keep timeline selection precise; Shift opts into keyframe snapping.
+        if (!m_bFineSeeking && duration >= 600000000LL && s.bFastSeek && (GetKeyState(VK_SHIFT) < 0)) {
             REFERENCE_TIME rtMaxDiff = s.bAllowInaccurateFastseek ? 200000000LL : std::min(100000000LL, duration / 30);
             rtPos = m_pMainFrame->GetClosestKeyFrame(rtPos, rtMaxDiff, rtMaxDiff);
         }
@@ -221,6 +227,10 @@ void CPlayerSeekBar::SyncThumbToVideo(REFERENCE_TIME rtPos, REFERENCE_TIME rtPos
 {
     m_rtPos = rtPos;
     m_rtPosDraw = rtPosDraw;
+    if (DraggingThumb()) {
+        m_pMainFrame->m_wndStatusBar.SetStatusTimer(rtPos, m_rtStop, true, m_pMainFrame->GetTimeFormat());
+        UpdateTime();
+    }
     if (m_bHasDuration) {
         CRect newThumbRect(GetThumbRect());
         bool bSetTaskbar = (rtPos <= 0);
@@ -394,10 +404,8 @@ int CPlayerSeekBar::TimeSectionEffectiveWidth() const
 
 CString CPlayerSeekBar::BuildTimeTemplate() const
 {
-    // Build the widest string the time section can currently produce, matching the format options
-    // used by CPlayerStatusBar::SetStatusTimer, so the reserved width fits exactly what's enabled.
+    // Reserve the widest timer text, including milliseconds shown during dragging.
     const CAppSettings& s = AfxGetAppSettings();
-    const bool highPrec = s.bHighPrecisionTimer || m_pMainFrame->IsSubresyncBarVisible();
 
     // Size to the largest time this media will show. With a known duration that's the duration (the
     // position and remaining time never exceed it); without one (live stream/capture) the status bar
@@ -418,10 +426,8 @@ CString CPlayerSeekBar::BuildTimeTemplate() const
     } else {
         time = _T("00:00");
     }
-    // '0' placeholders are reliably full-width, so the measured width never under-reserves.
-    if (highPrec) {
-        time += _T(".000");
-    }
+    // Keep the channel width stable when dragging starts and milliseconds appear.
+    time += _T(".000");
 
     if (!m_bHasDuration) {
         // Durationless media: the status bar shows a single running value, with no "/ duration",
@@ -633,12 +639,13 @@ void CPlayerSeekBar::GenerateToolTipText(REFERENCE_TIME rtPos)
     CString time;
     GUID timeFormat = m_pMainFrame->GetTimeFormat();
     if (timeFormat == TIME_FORMAT_MEDIA_TIME) {
-        DVD_HMSF_TIMECODE tcNow = RT2HMS_r(rtPos);
+        DVD_HMSF_TIMECODE tcNow = RT2HMSF(rtPos);
         if (tcNow.bHours > 0) {
             time.Format(_T("%02u:%02u:%02u"), tcNow.bHours, tcNow.bMinutes, tcNow.bSeconds);
         } else {
             time.Format(_T("%02u:%02u"), tcNow.bMinutes, tcNow.bSeconds);
         }
+        time.AppendFormat(_T(".%03d"), int((rtPos / 10000) % 1000));
     } else if (timeFormat == TIME_FORMAT_FRAME) {
         time.Format(_T("%I64d"), rtPos);
     } else {
@@ -996,6 +1003,9 @@ void CPlayerSeekBar::OnLButtonDown(UINT nFlags, CPoint point)
         pausedForScrolling = false;
         SetCapture();
         m_bDraggingThumb = true;
+        m_bFineSeeking = (nFlags & MK_CONTROL) != 0;
+        m_fineSeekAnchor = point;
+        m_rtFineSeekAnchor = m_rtPosDraw;
         MoveThumb(point);
         CheckScrollDistance(point, 0ULL, 0LL);
         invalidateThumb();
@@ -1015,9 +1025,10 @@ void CPlayerSeekBar::OnLButtonDblClk(UINT nFlags, CPoint point)
 void CPlayerSeekBar::OnLButtonUp(UINT nFlags, CPoint point)
 {
     if (DraggingThumb()) {
+        MoveThumb(point);
+        // Always apply the released position, including small adjustments after a drag.
+        CheckScrollDistance(point, 0LL, 0LL);
         ReleaseCapture();
-        // update video position if seekbar moved at least 250 ms or 1/100th of duration
-        CheckScrollDistance(point, std::min(2500000LL, m_rtStop / 100), 0LL);
         invalidateThumb();
         pauseAfterFirstScroll = false;
         if (pausedForScrolling) {
@@ -1085,7 +1096,7 @@ void CPlayerSeekBar::OnMouseMove(UINT nFlags, CPoint point)
     if (DraggingThumb() && (nFlags & MK_LBUTTON)) {
         MoveThumb(point);
         // update video position if seekbar moved at least 500ms or 1/30th of duration
-        CheckScrollDistance(point, std::min(5000000LL, m_rtStop / 30), 150LL);
+        CheckScrollDistance(point, m_bFineSeeking ? 0LL : std::min(5000000LL, m_rtStop / 30), 150LL);
     }
 
     if (AfxGetAppSettings().fUseSeekbarHover) {
@@ -1174,6 +1185,7 @@ void CPlayerSeekBar::OnCaptureChanged(CWnd* pWnd)
     // popup menu takes capture), so only run the drag-end cleanup when we were actually dragging.
     if (m_bDraggingThumb) {
         m_bDraggingThumb = false;
+        m_bFineSeeking = false;
         pauseAfterFirstScroll = false;
         if (pausedForScrolling) {
             pausedForScrolling = false;

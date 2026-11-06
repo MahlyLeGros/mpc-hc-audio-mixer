@@ -20,6 +20,7 @@
  */
 
 #include "stdafx.h"
+#include "AudioMixerProfile.h"
 #include <optional>
 #include "MainFrm.h"
 #include "mplayerc.h"
@@ -2481,7 +2482,9 @@ void CMainFrame::OnTimer(UINT_PTR nIDEvent)
                                 m_lSubtitleShift = 0;
                             }
 
-                            m_wndStatusBar.SetStatusTimer(rtNow, rtDur, IsSubresyncBarVisible(), GetTimeFormat());
+                            const bool draggingSeekbar = m_wndSeekBar.DraggingThumb();
+                            m_wndStatusBar.SetStatusTimer(draggingSeekbar ? m_wndSeekBar.GetPos() : rtNow,
+                                                         rtDur, IsSubresyncBarVisible() || draggingSeekbar, GetTimeFormat());
 
                             if (AfxGetAppSettings().bAutoCopySubtitleToClipboard && rtNow >= m_rtNextAutoCopySubtitle) {
                                 m_rtNextAutoCopySubtitle = CopyCurrentSubtitleToClipboard(rtNow);
@@ -4715,6 +4718,10 @@ LRESULT CMainFrame::OnFilePostOpenmedia(WPARAM wParam, LPARAM lParam)
         }
     }
 
+    if (m_audioMixSession && m_audioMixSession->enabled) {
+        AudioMix::SavePreferences(m_audioMixSession);
+        AfxGetMyApp()->WriteProfileInt(L"AudioMixer", L"AutoApply", 1);
+    }
     if (m_audioMixReload) {
         m_audioMixReload = false;
         if (m_audioMixDialog) m_audioMixDialog->SetBusy(false);
@@ -15090,6 +15097,18 @@ void CMainFrame::OpenFile(OpenFileData* pOFD)
 
     CAppSettings& s = AfxGetAppSettings();
 
+    if (!m_audioMixSession && AudioMix::AutoApply() &&
+        AudioMix::SupportsContainer(pOFD->fns.GetHead().GetString()) &&
+        PathFileExistsW(pOFD->fns.GetHead())) {
+        std::wstring error;
+        auto session=AudioMix::Probe(pOFD->fns.GetHead().GetString(),0,error);
+        if (session && session->tracks.size()>1) {
+            AudioMix::LoadPreferences(session);
+            session->initialized=true;
+            session->enabled=true;
+            m_audioMixSession=std::move(session);
+        }
+    }
     if (m_audioMixSession && m_audioMixSession->path == pOFD->fns.GetHead().GetString()) {
         static_cast<CFGManager*>(m_pGB.p)->SetAudioMixer(m_audioMixSession);
     }
@@ -20262,7 +20281,7 @@ void CMainFrame::DoSeekTo(REFERENCE_TIME rtPos, bool bShowOSD /*= true*/)
                 force_complete = (rtCur == stop);
             }
         }
-        m_wndStatusBar.SetStatusTimer(rtPos, stop, IsSubresyncBarVisible(), GetTimeFormat());
+        m_wndStatusBar.SetStatusTimer(rtPos, stop, IsSubresyncBarVisible() || m_wndSeekBar.DraggingThumb(), GetTimeFormat());
 
         if (bShowOSD) {
             m_OSD.DisplayMessage(OSD_TOPLEFT, m_wndStatusBar.GetStatusTimer(), 1500);

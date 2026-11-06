@@ -32,6 +32,7 @@ run('long-30min.mp4', ['-f', 'lavfi', '-i', 'color=c=black:size=64x64:rate=25:du
     '-f', 'lavfi', '-i', r'aevalsrc=if(lt(mod(t\,1)\,0.02)\,0.4*sin(2*PI*880*t)\,0):s=44100:d=1800',
     '-vf', r'drawbox=x=0:y=0:w=64:h=64:color=white:t=fill:enable=eq(mod(n\,25)\,0)',
     '-map', '0:v', '-map', '1:a', '-map', '2:a', '-c:v', 'libx264', '-preset', 'ultrafast', '-c:a', 'aac', '-b:a', '32k'])
+run('six-tracks.mp4', ['-i', str(out / 'long-30min.mp4'), '-map', '0:v', *['-map', '0:a:0'] * 6, '-c', 'copy'])
 (out / 'manifest.json').write_text(json.dumps({'duration_seconds': 8, 'delayed_track_start_seconds': 1.25,
     'delayed_track_end_seconds': 4.25, 'long_duration_seconds': 1800,
     'long_markers': 'white video flash and a 20ms audio pulse every second'}, indent=2))

@@ -39,8 +39,7 @@ pour identifier celles qui contiennent du son sans les écouter. Les niveaux son
 horodatés et affichés selon la position de lecture, pas l’avance du décodeur.
 La mesure couvre 50 ms pour conserver les sons brefs ; affichage toutes les 33 ms.
 Cliquer à nouveau sur l’icône, appuyer sur Échap ou cliquer ailleurs le masque
-sans interrompre le mixage. Les réglages restent pendant les pauses et les
-recherches et se réinitialisent au changement de fichier. Jusqu’à quatre pistes
+sans interrompre le mixage. Les volumes, états Muet et icônes sont conservés par numéro de piste entre fichiers et après redémarrage. Jusqu’à quatre pistes
 sont visibles : la molette hors des curseurs et la barre verticale permettent
  d’accéder aux suivantes. Sur un curseur, la molette règle cette piste par pas
  de 5 %. Le limiteur intégré protège la somme des pistes contre la saturation.
@@ -113,3 +112,24 @@ Les mises à jour automatiques sont désactivées dans le paquet portable pour
 ## Version 0.2.1
 
 Bouton mute/unmute par piste entre le nom et le vumètre, utilisant les ressources SVG natives MPC-HC rendues à la taille exacte du bouton. Le niveau de volume est conservé pendant le mute. Correction des traces sur les barres de volume après utilisation de la molette par rafraîchissement complet du contrôle.
+
+## Préférences persistantes et pictogrammes (0.2.3)
+
+Cliquer sur le bouton entre le nom et le haut-parleur pour choisir un pictogramme.
+Les 12 choix sont : aucun (+), micro, manette, personne, groupe, écran, musique,
+haut-parleur, casque, caméra, navigateur et téléphone. Ce sont des repères visuels.
+Les préférences de la piste audio 1 suivent la piste audio 1 dans tous les fichiers,
+même si son nom change. Plusieurs pistes peuvent partager le même pictogramme.
+Après une première activation réussie, le mixage est appliqué automatiquement aux
+vidéos compatibles à plusieurs pistes ; ouvrir le panneau reste facultatif.
+Les nouvelles pistes commencent à 0 %, sans Muet ni pictogramme ; les préférences
+des pistes absentes sont conservées. Les fichiers à une seule piste gardent la lecture habituelle.
+Les données utilisent la section AudioMixer des préférences existantes (INI ou registre).
+
+## Noms personnalisés (0.2.4)
+
+Les noms du mélangeur sont éditables directement et accessibles au clavier avec Tab.
+Entrée termine la saisie sans fermer le panneau ; Échap restaure le nom avant modification.
+Vider le champ revient au nom original. Les noms sont sauvegardés par numéro de piste
+et restaurés entre fichiers et après redémarrage. Les titres du média sont conservés ;
+les noms personnalisés sont stockés dans les clés TrackNName de la section AudioMixer.

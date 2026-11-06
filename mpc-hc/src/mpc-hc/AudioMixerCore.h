@@ -25,8 +25,10 @@ inline bool SupportsContainer(const std::wstring& path) {
 struct Track {
     int streamIndex = -1;
     std::wstring name;
+    std::wstring customName;
     std::wstring language;
     std::wstring error;
+    std::wstring icon = L"none";
     float volume = 0.0f;
     bool mute = false;
     bool solo = false;

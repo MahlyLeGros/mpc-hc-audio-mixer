@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 #include "stdafx.h"
 #include "MainFrm.h"
+#include "AudioMixerProfile.h"
 
 bool CMainFrame::CanMixAudio() {
     if (!IsStateLoaded() || GetPlaybackMode() != PM_FILE || m_audioMixReload) return false;
@@ -43,6 +44,7 @@ void CMainFrame::OnAudioMixer() {
             return;
         }
     }
+    if (!m_audioMixSession->initialized) AudioMix::LoadPreferences(m_audioMixSession);
     if (!m_audioMixDialog) {
         m_audioMixDialog = std::make_unique<CAudioMixerDlg>(this, m_audioMixSession,
             [this](bool enabled) { ToggleAudioMixer(enabled); },
